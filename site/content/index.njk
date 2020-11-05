@@ -1,17 +1,11 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signal Flags</title>
-    <meta name="description" content="Signal flag images for the web and print.">
-    <script async src="/assets/app/app-ekrbo.min.js"></script>
-    <link rel="stylesheet" href="/assets/app/app-ekrbo.min.css">
-    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Signal Flags">
-    <link rel="alternate" href="/feed/feed.json" type="application/json" title="Signal Flags">
-  </head>
-  <body>
-    
+---
+# The home page is hand coded, no markdown here.
+layout: base
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+
 <div class="pt-3 block-blue">
   <div class="container">
     <div class="row">
@@ -44,63 +38,36 @@
         class="col-12 col-sm-8 offset-sm-2 offset-md-0 col-md-6 col-lg-4 xp-3 text-justify block-light"
       >
         Images with outlines look great on a white background so are best for
-        documents printed on plain paper. 
+        documents printed on plain paper. {# Mock up a SI document #}
         <div class="my-3 px-3 pt-2 pb-3 text-left" style="background: #fff">
           <div class="text-larger"><strong>Sailing Instructions</strong></div>
           <div class="d-flex">
             <div style="width: 32%" class="mr-3">
-              Class A<svg viewBox="0 0 240 180">
-<path fill="#fff" d="M0,0H120V180H0Z"/>
-<path fill="#005eb8" d="M120,0H240L180,90L240,180H120Z"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5L179.5,90L239.5,179.5H0.5Z"/>
-</svg>
+              Class A{% signalFlag 'a', { outline: true } %}
             </div>
             <div style="width: 48%">
-              Class 1<svg viewBox="0 0 360 180">
-<path fill="#fff" d="M0,0L360,60V120L0,180ZM120,45A45,45 0 0 0 75,90A45,45 0 1 0 120,45"/>
-<circle fill="#c8102e" cx="120" cy="90" r="45"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5L359.5,60.5V119.5L0.5,179.5Z"/>
-</svg>
+              Class 1{% signalFlag 'n1', { outline: true } %}
             </div>
           </div>
           <div class="d-flex mt-2">
             <div style="width: 32%" class="mr-3">
-              Shorten course<svg viewBox="0 0 240 180">
-<path fill="#fff" d="M0,0H240V180H0ZM72,54V126H168V54Z"/>
-<path fill="#005eb8" d="M72,54H168V126H72Z"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5V179.5H0.5Z"/>
-</svg>
+              Shorten course{% signalFlag 's', { outline: true } %}
             </div>
             <div style="width: 32%">
               General<br />
-              recall<svg viewBox="0 0 240 180">
-<path fill="#ffd100" d="M0,37.5V142.5L140,90Z"/>
-<path fill="#005eb8" d="M0,0L240,90L0,180ZM0,37.5V142.5L140,90L0,37.5"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5L239.5,90.5L0.5,179.5Z"/>
-</svg>
+              recall{% signalFlag 's1', { outline: true } %}
             </div>
           </div>
           <div class="mt-2">RRS D2.4 Signal by an Umpire</div>
           <div class="d-flex justify-content-between text-smaller">
             <div style="width: 32%">
-              a. No penalty<svg viewBox="0 0 240 180">
-<path fill="#00965e" d="M0,0H60V180H120V0H180V180H240V135H0V90H240V45H0V0"/>
-<path fill="#fff" d="M240,0H180V180H120V0H60V180H0V45H240V90H0V135H240V0"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5V179.5H0.5Z"/>
-</svg>
+              a. No penalty{% signalFlag 'greenwhite', { outline: true } %}
             </div>
             <div style="width: 32%">
-              b. Penalty<svg viewBox="0 0 240 180">
-<path fill="#c8102e" d="M0,0H240V180H0Z"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5V179.5H0.5Z"/>
-</svg>
+              b. Penalty{% signalFlag 'red', { outline: true } %}
             </div>
             <div style="width: 32%">
-              c. Report<svg viewBox="0 0 240 180">
-<path fill="#2d2926" d="M0,0H120V180H240V90H0V0"/>
-<path fill="#fff" d="M240,0H120V180H0V90H240V0"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5V179.5H0.5Z"/>
-</svg>
+              c. Report{% signalFlag 'blackwhite', { outline: true } %}
             </div>
           </div>
         </div>
@@ -110,58 +77,31 @@
         class="col-12 col-sm-8 offset-sm-2 offset-md-0 col-md-6 col-lg-4 xp-3 text-justify block-light"
       >
         On a coloured background images with no outlines sometimes work better
-        so outlines are optional. 
+        so outlines are optional. {# Mock up a SI document #}
         <div class="my-3 px-3 pt-2 pb-3 text-left">
           <div class="text-larger"><strong>Sailing Instructions</strong></div>
           <div class="d-flex">
             <div style="width: 32%" class="mr-3">
-              Class A<svg viewBox="0 0 240 180">
-<path fill="#fff" d="M0,0H120V180H0Z"/>
-<path fill="#005eb8" d="M120,0H240L180,90L240,180H120Z"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5L179.5,90L239.5,179.5H0.5Z"/>
-</svg>
+              Class A{% signalFlag 'a' %}
             </div>
-            <div style="width: 48%">Class 1<svg viewBox="0 0 360 180">
-<path fill="#fff" d="M0,0L360,60V120L0,180ZM120,45A45,45 0 0 0 75,90A45,45 0 1 0 120,45"/>
-<circle fill="#c8102e" cx="120" cy="90" r="45"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5L359.5,60.5V119.5L0.5,179.5Z"/>
-</svg></div>
+            <div style="width: 48%">Class 1{% signalFlag 'n1' %}</div>
           </div>
           <div class="d-flex mt-2">
             <div style="width: 32%" class="mr-3">
-              Shorten course<svg viewBox="0 0 240 180">
-<path fill="#fff" d="M0,0H240V180H0ZM72,54V126H168V54Z"/>
-<path fill="#005eb8" d="M72,54H168V126H72Z"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5V179.5H0.5Z"/>
-</svg>
+              Shorten course{% signalFlag 's' %}
             </div>
             <div style="width: 32%">
               General<br />
-              recall<svg viewBox="0 0 240 180">
-<path fill="#ffd100" d="M0,37.5V142.5L140,90Z"/>
-<path fill="#005eb8" d="M0,0L240,90L0,180ZM0,37.5V142.5L140,90L0,37.5"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5L239.5,90.5L0.5,179.5Z"/>
-</svg>
+              recall{% signalFlag 's1' %}
             </div>
           </div>
           <div class="mt-2">RRS D2.4 Signal by an Umpire</div>
           <div class="d-flex justify-content-between text-smaller">
             <div style="width: 32%">
-              a. No penalty<svg viewBox="0 0 240 180">
-<path fill="#00965e" d="M0,0H60V180H120V0H180V180H240V135H0V90H240V45H0V0"/>
-<path fill="#fff" d="M240,0H180V180H120V0H60V180H0V45H240V90H0V135H240V0"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5V179.5H0.5Z"/>
-</svg>
+              a. No penalty{% signalFlag 'greenwhite' %}
             </div>
-            <div style="width: 32%">b. Penalty<svg viewBox="0 0 240 180">
-<path fill="#c8102e" d="M0,0H240V180H0Z"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5V179.5H0.5Z"/>
-</svg></div>
-            <div style="width: 32%">c. Report<svg viewBox="0 0 240 180">
-<path fill="#2d2926" d="M0,0H120V180H240V90H0V0"/>
-<path fill="#fff" d="M240,0H120V180H0V90H240V0"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5V179.5H0.5Z"/>
-</svg></div>
+            <div style="width: 32%">b. Penalty{% signalFlag 'red' %}</div>
+            <div style="width: 32%">c. Report{% signalFlag 'blackwhite' %}</div>
           </div>
         </div>
       </div>
@@ -170,61 +110,36 @@
         class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-0 xp-3 text-justify block-light"
       >
         As well as rectangular flags, all images are available in the square
-        shape used in the United States.  
+        shape used in the United States. {# Mock up a SI document #} {% set
+        options = { outline: true, viewBox: { default: [180, 180], swallowtail:
+        [180, 180], pennant: [240, 180] , triangle: [180, 180] } } %}
         <div class="my-3 px-3 pt-2 pb-3 text-left" style="background: #fff">
           <div class="text-larger"><strong>Sailing Instructions</strong></div>
           <div class="d-flex">
             <div style="width: 24%" class="mr-3">
-              Class A<svg viewBox="0 0 240 180">
-<path fill="#fff" d="M0,0H120V180H0Z"/>
-<path fill="#005eb8" d="M120,0H240L180,90L240,180H120Z"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5L179.5,90L239.5,179.5H0.5Z"/>
-</svg>
+              Class A{% signalFlag 'a', options %}
             </div>
-            <div style="width: 24%">Class 1<svg viewBox="0 0 360 180">
-<path fill="#fff" d="M0,0L360,60V120L0,180ZM120,45A45,45 0 0 0 75,90A45,45 0 1 0 120,45"/>
-<circle fill="#c8102e" cx="120" cy="90" r="45"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5L359.5,60.5V119.5L0.5,179.5Z"/>
-</svg></div>
+            <div style="width: 24%">Class 1{% signalFlag 'n1', options %}</div>
           </div>
           <div class="d-flex mt-2">
             <div style="width: 24%" class="mr-3">
-              Shorten course<svg viewBox="0 0 240 180">
-<path fill="#fff" d="M0,0H240V180H0ZM72,54V126H168V54Z"/>
-<path fill="#005eb8" d="M72,54H168V126H72Z"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5V179.5H0.5Z"/>
-</svg>
+              Shorten course{% signalFlag 's', options %}
             </div>
             <div style="width: 24%">
               General<br />
-              recall<svg viewBox="0 0 240 180">
-<path fill="#ffd100" d="M0,37.5V142.5L140,90Z"/>
-<path fill="#005eb8" d="M0,0L240,90L0,180ZM0,37.5V142.5L140,90L0,37.5"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5L239.5,90.5L0.5,179.5Z"/>
-</svg>
+              recall{% signalFlag 's1', options %}
             </div>
           </div>
           <div class="mt-2">RRS D2.4 Signal by an Umpire</div>
           <div class="d-flex justify-content-between text-smaller">
             <div style="width: 24%">
-              a. No pen.<svg viewBox="0 0 240 180">
-<path fill="#00965e" d="M0,0H60V180H120V0H180V180H240V135H0V90H240V45H0V0"/>
-<path fill="#fff" d="M240,0H180V180H120V0H60V180H0V45H240V90H0V135H240V0"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5V179.5H0.5Z"/>
-</svg>
+              a. No pen.{% signalFlag 'greenwhite', options %}
             </div>
             <div style="width: 24%">
-              b. Penalty<svg viewBox="0 0 240 180">
-<path fill="#c8102e" d="M0,0H240V180H0Z"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5V179.5H0.5Z"/>
-</svg>
+              b. Penalty{% signalFlag 'red', options %}
             </div>
             <div style="width: 24%">
-              c. Report<svg viewBox="0 0 240 180">
-<path fill="#2d2926" d="M0,0H120V180H240V90H0V0"/>
-<path fill="#fff" d="M240,0H120V180H0V90H240V0"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5V179.5H0.5Z"/>
-</svg>
+              c. Report{% signalFlag 'blackwhite', options %}
             </div>
           </div>
         </div>
@@ -332,11 +247,3 @@
     </div>
   </div>
 </div>
-
-
-    <footer></footer>
-    
-
-    
-  </body>
-</html>
