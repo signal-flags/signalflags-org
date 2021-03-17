@@ -31,117 +31,185 @@ eleventyNavigation:
   </div>
 </div>
 
-<div class="block-light py-3">
+<div class="block-light pb-3">
   <div class="container">
     <div class="row">
       <div
-        class="col-12 col-sm-8 offset-sm-2 offset-md-0 col-md-6 col-lg-4 xp-3 text-justify block-light"
+        class="col-12 col-sm-8 offset-sm-2 offset-md-0 col-md-6 col-lg-4 mt-3 mb-2 text-justify block-light"
       >
         Images with outlines look great on a white background so are best for
-        documents printed on plain paper. {# Mock up a SI document #}
-        <div class="my-3 px-3 pt-2 pb-3 text-left" style="background: #fff">
+        documents printed on plain paper.
+        <div class="my-1 px-3 pt-2 pb-3 text-left" style="background: #fff">
           <div class="text-larger"><strong>Sailing Instructions</strong></div>
-          <div class="d-flex">
-            <div style="width: 32%" class="mr-3">
-              Class A{% signalFlag 'a', { outline: true } %}
+
+          <div class="d-flex justify-content-between">
+            <div style="width: 40%">Class A</div>
+            <div style="width: 50%">Class 1</div>
+          </div>
+
+          <div class="d-flex justify-content-between pb-2">
+            <div style="width: 40%">
+              <img src="{% sfImgSrc 'a' %}" alt="Signal flag A">
             </div>
-            <div style="width: 48%">
-              Class 1{% signalFlag 'n1', { outline: true } %}
+            <div style="width: 50%">
+              <img src="{% sfImgSrc 'n1' %}" alt="Numeral 1 pennant">
             </div>
           </div>
-          <div class="d-flex mt-2">
-            <div style="width: 32%" class="mr-3">
-              Shorten course{% signalFlag 's', { outline: true } %}
+
+          <div class="d-flex justify-content-around text-center mt-2">
+            <div class="w-50">Shorten course</div>
+            <div class="w-50">General recall</div>
+          </div>
+
+          <div class="d-flex justify-content-around pb-2">
+            <div style="width: 40%">
+              <img src="{% sfImgSrc 's' %}" alt="Signal flag S">
             </div>
-            <div style="width: 32%">
-              General<br />
-              recall{% signalFlag 's1', { outline: true } %}
+            <div style="width: 40%">
+              <img src="{% sfImgSrc 's1' %}" alt="1st substitute flag">
             </div>
           </div>
+
           <div class="mt-2">RRS D2.4 Signal by an Umpire</div>
+
           <div class="d-flex justify-content-between text-smaller">
-            <div style="width: 32%">
-              a. No penalty{% signalFlag 'greenwhite', { outline: true } %}
+            <div style="width: 33%">a. No penalty</div>
+            <div style="width: 33%" class="text-center">b. Penalty</div>
+            <div style="width: 33%" class="text-right pr-2">c. Report</div>
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <div style="width: 28%">
+              <img src="{% sfImgSrc 'greenwhite' %}" alt="Green and white signal flag">
             </div>
-            <div style="width: 32%">
-              b. Penalty{% signalFlag 'red', { outline: true } %}
+            <div style="width: 28%">
+              <img src="{% sfImgSrc 'red' %}" alt="Red signal flag">
             </div>
-            <div style="width: 32%">
-              c. Report{% signalFlag 'blackwhite', { outline: true } %}
+            <div style="width: 28%">
+              <img src="{% sfImgSrc 'blackwhite' %}" alt="Black and white signal flag">
             </div>
           </div>
         </div>
       </div>
 
       <div
-        class="col-12 col-sm-8 offset-sm-2 offset-md-0 col-md-6 col-lg-4 xp-3 text-justify block-light"
+        class="col-12 col-sm-8 offset-sm-2 offset-md-0 col-md-6 col-lg-4 mt-3 mb-2 text-justify block-light"
       >
         On a coloured background images with no outlines sometimes work better
-        so outlines are optional. {# Mock up a SI document #}
-        <div class="my-3 px-3 pt-2 pb-3 text-left">
+        so outlines are optional.
+        {% set options = { outline: false } %}
+
+        <div class="my-1 px-3 pt-2 pb-3 text-left" style="background: transparent;">
           <div class="text-larger"><strong>Sailing Instructions</strong></div>
-          <div class="d-flex">
-            <div style="width: 32%" class="mr-3">
-              Class A{% signalFlag 'a' %}
-            </div>
-            <div style="width: 48%">Class 1{% signalFlag 'n1' %}</div>
+
+          <div class="d-flex justify-content-between">
+            <div style="width: 40%">Class A</div>
+            <div style="width: 50%">Class 1</div>
           </div>
-          <div class="d-flex mt-2">
-            <div style="width: 32%" class="mr-3">
-              Shorten course{% signalFlag 's' %}
+
+          <div class="d-flex justify-content-between pb-2">
+            <div style="width: 40%" class="mr-3">
+              <img src="{% sfImgSrc 'a', options %}" alt="Signal flag A">
             </div>
-            <div style="width: 32%">
-              General<br />
-              recall{% signalFlag 's1' %}
+            <div style="width: 50%">
+              <img src="{% sfImgSrc 'n1', options %}" alt="Numeral 1 pennant">
             </div>
           </div>
+
+          <div class="d-flex justify-content-around text-center mt-2">
+            <div class="w-50">Shorten course</div>
+            <div class="w-50">General recall</div>
+          </div>
+
+          <div class="d-flex justify-content-around pb-2">
+            <div style="width: 40%" class="mr-3">
+              <img src="{% sfImgSrc 's', options %}" alt="Signal flag S">
+            </div>
+            <div style="width: 40%">
+              <img src="{% sfImgSrc 's1', options %}" alt="1st substitute flag">
+            </div>
+          </div>
+
           <div class="mt-2">RRS D2.4 Signal by an Umpire</div>
+
           <div class="d-flex justify-content-between text-smaller">
-            <div style="width: 32%">
-              a. No penalty{% signalFlag 'greenwhite' %}
+            <div style="width: 33%">a. No penalty</div>
+            <div style="width: 33%" class="text-center">b. Penalty</div>
+            <div style="width: 33%" class="text-right pr-2">c. Report</div>
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <div style="width: 28%">
+              <img src="{% sfImgSrc 'greenwhite', options %}" alt="Green and white signal flag">
             </div>
-            <div style="width: 32%">b. Penalty{% signalFlag 'red' %}</div>
-            <div style="width: 32%">c. Report{% signalFlag 'blackwhite' %}</div>
+            <div style="width: 28%">
+              <img src="{% sfImgSrc 'red', options %}" alt="Red signal flag">
+            </div>
+            <div style="width: 28%">
+              <img src="{% sfImgSrc 'blackwhite', options %}" alt="Black and white signal flag">
+            </div>
           </div>
         </div>
       </div>
 
       <div
-        class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-0 xp-3 text-justify block-light"
+        class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-0 mt-3 mb-2 text-justify block-light"
       >
         As well as rectangular flags, all images are available in the square
-        shape used in the United States. {# Mock up a SI document #} {% set
-        options = { outline: true, viewBox: { default: [180, 180], swallowtail:
-        [180, 180], pennant: [240, 180] , triangle: [180, 180] } } %}
-        <div class="my-3 px-3 pt-2 pb-3 text-left" style="background: #fff">
+        shape used in the United States. {% set
+        options = { shape: 'square' } %}
+
+      <div class="my-1 px-3 pt-2 pb-3 text-left" style="background: #fff;">
           <div class="text-larger"><strong>Sailing Instructions</strong></div>
-          <div class="d-flex">
-            <div style="width: 24%" class="mr-3">
-              Class A{% signalFlag 'a', options %}
-            </div>
-            <div style="width: 24%">Class 1{% signalFlag 'n1', options %}</div>
+
+          <div class="d-flex justify-content-between">
+            <div style="width: 40%">Class A</div>
+            <div style="width: 50%">Class 1</div>
           </div>
-          <div class="d-flex mt-2">
-            <div style="width: 24%" class="mr-3">
-              Shorten course{% signalFlag 's', options %}
+
+          <div class="d-flex justify-content-between pb-2">
+            <div style="width: 30%" class="mr-3">
+              <img src="{% sfImgSrc 'a', options %}" alt="Signal flag A">
             </div>
-            <div style="width: 24%">
-              General<br />
-              recall{% signalFlag 's1', options %}
+            <div style="width: 50%">
+              <img src="{% sfImgSrc 'n1', options %}" alt="Numeral 1 pennant">
             </div>
           </div>
-          <div class="mt-2">RRS D2.4 Signal by an Umpire</div>
+
+          <div class="d-flex justify-content-around text-center mt-2 block-light">
+            <div class="w-50">Shorten course</div>
+            <div class="w-50">General recall</div>
+          </div>
+
+          <div class="d-flex justify-content-around pb-2 block-light">
+            <div style="width: 30%" class="mr-3">
+              <img src="{% sfImgSrc 's', { shape: 'square', outline: false } %}" alt="Signal flag S">
+            </div>
+            <div style="width: 33.33%">
+              <img src="{% sfImgSrc 's1', { shape: 'square', outline: false } %}" alt="1st substitute flag">
+            </div>
+          </div>
+
+          <div class="pt-2">RRS D2.4 Signal by an Umpire</div>
+
           <div class="d-flex justify-content-between text-smaller">
-            <div style="width: 24%">
-              a. No pen.{% signalFlag 'greenwhite', options %}
+            <div style="width: 33%">a. No penalty</div>
+            <div style="width: 33%" class="text-center">b. Penalty</div>
+            <div style="width: 33%" class="text-right pr-2">c. Report</div>
+          </div>
+
+          <div class="d-flex justify-content-between text-smaller">
+            <div style="width: 21%">
+              <img src="{% sfImgSrc 'greenwhite', options %}" alt="Green and white signal flag">
             </div>
-            <div style="width: 24%">
-              b. Penalty{% signalFlag 'red', options %}
+            <div style="width: 21%">
+              <img src="{% sfImgSrc 'red', options %}" alt="Red signal flag">
             </div>
-            <div style="width: 24%">
-              c. Report{% signalFlag 'blackwhite', options %}
+            <div style="width: 21%">
+              <img src="{% sfImgSrc 'blackwhite', options %}" alt="Black and white signal flag">
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -167,12 +235,12 @@ eleventyNavigation:
           </li>
 
           <li class="mb-1">
-            have realistic colours that don't hurt your eyes (or your printer)
+            have realistic colours that don’t hurt your eyes (or your printer)
           </li>
 
           <li class="mb-1">
             include all flags and pennants from the International Code of
-            Signals (ICS) and the Racing Rules of Sailing (RRS) plus some others
+            Signals (ICS) and the Racing Rules of Sailing (RRS) and more
           </li>
 
           <li>
