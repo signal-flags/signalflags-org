@@ -1,8 +1,9 @@
 {
-  "name": "signal-flags-hugo",
-  "version": "0.0.0-dev",
+  "name": "signal-flags-github-io",
+  "version": "0.6.0-dev",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "npm run build:hugo",
     "build:signal-flags": "rm -rf data/signal-flags && node bin/build-signal-flags",
