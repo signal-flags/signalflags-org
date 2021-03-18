@@ -1,5 +1,5 @@
-<a href='/images/sf-outline/{{ (.Get 0) }}.svg' download="{{ .Get 0 }}">
-<img
-  src='{{ index $.Page.Site.Data.sfDataUri.sfOutline (.Get 0) | safeURL }}'
-  alt='{{ index $.Page.Site.Data.sfFlags.flags (.Get 0) "alt" }}'
-  /></a>
+<a href="/images/sf-outline/{{ (.Get 0) }}.svg" download="{{ .Get 0 }}">
+  <img
+    src="{{ index $.Page.Site.Data.sfDataUri.sfOutline (.Get 0) | safeURL }}"
+    alt='{{ index $.Page.Site.Data.sfFlags.flags (.Get 0) "alt" }}'
+/></a>

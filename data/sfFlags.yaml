@@ -183,8 +183,8 @@ flags:
     alt: Numeral 0 pennant
     group: numerals
 
-
 groups:
+  # prettier-ignore
   letters: [a, b, c, d, e, f, g, h, i, j, k, l, m, 'n', o, p, q, r, s, t, u, v, w, x, 'y', z]
   numerals: [n1, n2, n3, n4, n5, n6, n7, n8, n9, n0]
   substitutes: [s1, s2, s3]

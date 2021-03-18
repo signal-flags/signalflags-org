@@ -7,6 +7,8 @@
   "scripts": {
     "build": "npm run build:hugo",
     "build:signal-flags": "rm -rf data/signal-flags && node bin/build-signal-flags",
+    "lint": "prettier . --check",
+    "lint:fix": "prettier . --write",
     "build:hugo": "rm -rf public && NODE_ENV=production hugo",
     "serve": "hugo server -D"
   },

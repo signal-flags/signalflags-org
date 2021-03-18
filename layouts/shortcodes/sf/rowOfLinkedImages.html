@@ -1,34 +1,19 @@
+{{ $dataUri := index $.Page.Site.Data.sfDesigns.designs (.Get 1) "dataUri" }} {{
+$flags := index $.Page.Site.Data.sfFlags.flags }} {{ $flagNames := index
+$.Page.Site.Data.sfFlags.groups (.Get 0) }} {{ range $flagNames}}
+<div>
+  Name {{ . }}
+  <img
+    src="{{ index $.Page.Site.Data.sfDataUri $dataUri . | safeURL }}"
+    alt='{{ index $flags . "alt" }}'
+  />
+</div>
+{{ end }} {{/* {{ .Get 0 }} {{ .Get 1 }} {{ range (index
+$.Page.Site.Data.sfDataUri "sfOutline") }} {{ . }} a {{ end }}
 
-
-{{ $dataUri := index $.Page.Site.Data.sfDesigns.designs (.Get 1) "dataUri" }}
-
-{{ $flags := index $.Page.Site.Data.sfFlags.flags }}
-
-{{ $flagNames := index $.Page.Site.Data.sfFlags.groups (.Get 0) }}
-
-
-{{ range $flagNames}}
-  <div>
-    Name {{ . }}
-    <img
-      src='{{ index $.Page.Site.Data.sfDataUri $dataUri . | safeURL }}'
-      alt='{{ index $flags . "alt" }}'
-      />
-  </div>
-{{ end }}
-
-{{/*
-
-{{ .Get 0 }}
-{{ .Get 1 }}
-
-{{ range (index $.Page.Site.Data.sfDataUri "sfOutline") }}
-{{ . }} a
-{{ end }}
-
-<a href='/images/sf-outline/{{ (.Get 0) }}.svg' download="{{ .Get 0 }}">
-<img
-  src='{{ index $.Page.Site.Data.sfDataUri.sfOutline (.Get 0) | safeURL }}'
-  alt='{{ index $.Page.Site.Data.sfFlags.flags (.Get 0) "alt" }}'
-  /></a>
+<a href="/images/sf-outline/{{ (.Get 0) }}.svg" download="{{ .Get 0 }}">
+  <img
+    src="{{ index $.Page.Site.Data.sfDataUri.sfOutline (.Get 0) | safeURL }}"
+    alt='{{ index $.Page.Site.Data.sfFlags.flags (.Get 0) "alt" }}'
+/></a>
 */}}

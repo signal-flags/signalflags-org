@@ -1,0 +1,5 @@
+# .prettierignore
+
+/resources/_gen
+
+/docs/css

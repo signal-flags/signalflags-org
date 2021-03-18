@@ -33,5 +33,9 @@ h6 {
 }
 
 /* Can't apply w-16 ? */
-.flags-in-a-row > div { width: 4rem; }
-.flags-in-a-row.pennants > div { width: 5rem; }
+.flags-in-a-row > div {
+  width: 4rem;
+}
+.flags-in-a-row.pennants > div {
+  width: 5rem;
+}
