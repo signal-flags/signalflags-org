@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Signal Flags</title>
+    <link>https://signalflags.org/</link>
+    <description>Recent content on Signal Flags</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language><atom:link href="https://signalflags.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://signalflags.org/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://signalflags.org/about/</guid>
+      <description>about us</description>
+    </item>
+    
+    <item>
+      <title>Flags</title>
+      <link>https://signalflags.org/flags/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://signalflags.org/flags/</guid>
+      <description>All the flags These are the flags  Main set These have an outline
+Letters  Name a   Name b   Name c   Name d   Name e   Name f   Name g   Name h   Name i   Name j   Name k   Name l   Name m   Name n   Name o   Name p   Name q   Name r   Name s   Name t   Name u   Name v   Name w   Name x   Name y   Name z   Numerals  Name n1   Name n2   Name n3   Name n4   Name n5   Name n6   Name n7   Name n8   Name n9   Name n0    Without outlines These have no outline</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,9 +1,2 @@
 
-node_modules/
-
-# Don't fill the repo with the distribution.
-dist/
-
-# These are built by webpack with hashes to break caching.
-site/assets/app
-site/data/assets.json
+node_modules

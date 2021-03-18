@@ -1,0 +1,33 @@
+# <a href='/images/sf-outline/{{ (.Get 0) }}.svg'>
+#  src='{{ index $.Page.Site.Data.sfDataUri.sfOutline (.Get 0) | safeURL }}'
+#  alt='{{ index $.Page.Site.Data.sfFlags.flags (.Get 0) "alt" }}'
+#  /></a>
+
+list:
+  - outline
+  - noOutline
+  - squareOutline
+  - squareNoOutline
+  - squareNoOutlinePrimary
+
+designs:
+  outline:
+    path: /images/sf-outline/
+    dataUri: sfOutline
+
+  noOutline:
+    path: /images/sf-no-outline/
+    dataUri: sfNoOutline
+
+  squareNoOutline:
+    path: /images/sf-square-no-outline/
+    dataUri: sfSquareNoOutline
+
+  squareOutline:
+    path: /images/sf-square-outline/
+    dataUri: sfSquareOutline
+
+  squareNoOutlinePrimary:
+    path: /images/sf-square-no-outline-primary/
+    dataUri: sfSquareNoOutlinePrimary
+

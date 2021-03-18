@@ -1,0 +1,191 @@
+flags:
+  a:
+    abbr: A
+    alt: Signal flag A
+    group: letters
+
+  b:
+    abbr: B
+    alt: Signal flag B
+    group: letters
+
+  c:
+    abbr: C
+    alt: Signal flag C
+    group: letters
+
+  d:
+    abbr: D
+    alt: Signal flag D
+    group: letters
+
+  e:
+    abbr: E
+    alt: Signal flag E
+    group: letters
+
+  f:
+    abbr: F
+    alt: Signal flag F
+    group: letters
+
+  g:
+    abbr: G
+    alt: Signal flag G
+    group: letters
+
+  h:
+    abbr: H
+    alt: Signal flag H
+    group: letters
+
+  i:
+    abbr: I
+    alt: Signal flag I
+    group: letters
+
+  j:
+    abbr: J
+    alt: Signal flag J
+    group: letters
+
+  k:
+    abbr: K
+    alt: Signal flag K
+    group: letters
+
+  l:
+    abbr: L
+    alt: Signal flag L
+    group: letters
+
+  m:
+    abbr: M
+    alt: Signal flag M
+    group: letters
+
+  # n without quotes is evaluated as false.
+  'n':
+    abbr: 'N'
+    alt: Signal flag N
+    group: letters
+
+  o:
+    abbr: O
+    alt: Signal flag O
+    group: letters
+
+  p:
+    abbr: P
+    alt: Signal flag P
+    group: letters
+
+  q:
+    abbr: Q
+    alt: Signal flag Q
+    group: letters
+
+  r:
+    abbr: R
+    alt: Signal flag R
+    group: letters
+
+  s:
+    abbr: S
+    alt: Signal flag S
+    group: letters
+
+  t:
+    abbr: T
+    alt: Signal flag T
+    group: letters
+
+  u:
+    abbr: U
+    alt: Signal flag U
+    group: letters
+
+  v:
+    abbr: V
+    alt: Signal flag V
+    group: letters
+
+  w:
+    abbr: W
+    alt: Signal flag W
+    group: letters
+
+  x:
+    abbr: X
+    alt: Signal flag X
+    group: letters
+
+  # y without quotes is evaluated as true.
+  'y':
+    abbr: 'Y'
+    alt: Signal flag Y
+    group: letters
+
+  z:
+    abbr: Z
+    alt: Signal flag Z
+    group: letters
+
+  # --- Numerals ---------------------------------------------------------------
+
+  n1:
+    abbr: '1'
+    alt: Numeral 1 pennant
+    group: numerals
+
+  n2:
+    abbr: '2'
+    alt: Numeral 2 pennant
+    group: numerals
+
+  n3:
+    abbr: '3'
+    alt: Numeral 3 pennant
+    group: numerals
+
+  n4:
+    abbr: '4'
+    alt: Numeral 4 pennant
+    group: numerals
+
+  n5:
+    abbr: '5'
+    alt: Numeral 5 pennant
+    group: numerals
+
+  n6:
+    abbr: '6'
+    alt: Numeral 6 pennant
+    group: numerals
+
+  n7:
+    abbr: '7'
+    alt: Numeral 7 pennant
+    group: numerals
+
+  n8:
+    abbr: '8'
+    alt: Numeral 8 pennant
+    group: numerals
+
+  n9:
+    abbr: '9'
+    alt: Numeral 9 pennant
+    group: numerals
+
+  n0:
+    abbr: '0'
+    alt: Numeral 0 pennant
+    group: numerals
+
+
+groups:
+  letters: [a, b, c, d, e, f, g, h, i, j, k, l, m, 'n', o, p, q, r, s, t, u, v, w, x, 'y', z]
+  numerals: [n1, n2, n3, n4, n5, n6, n7, n8, n9, n0]
+  substitutes: [s1, s2, s3]
+  rrs: [red, green, greenwhite, black, blackwhite]
