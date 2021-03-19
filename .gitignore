@@ -1,6 +1,12 @@
 # .gitignore
 node_modules
 
-# Ignore all build artifacts.
+# Hugo builds into this git repo for deployment.
+signal-flags.github.io
+
+# Ignore hugo/tailwind build artifacts.
 resources/_gen
-# docs
+
+# Ignore files built with build:signal-flags.
+data/sfDataUri
+static/sf-*
