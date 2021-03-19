@@ -7,34 +7,44 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 */
+body {
+  @apply text-gray-800;
+}
+
+p {
+  @apply pb-3;
+}
 
 h1 {
-  @apply text-5xl font-bold mt-12 mb-2;
+  @apply text-5xl font-bold pb-2 mb-1;
 }
 
 h2 {
-  @apply text-4xl font-bold mt-8 mb-2;
+  @apply text-4xl font-bold pb-2 mb-1;
 }
 
 h3 {
-  @apply text-3xl font-bold mt-4 mb-2;
+  @apply text-3xl font-bold pb-2 mb-1;
 }
 
 h4 {
-  @apply text-2xl font-bold mt-2 mb-2;
+  @apply text-2xl font-bold pb-2 mb-1;
 }
 
 h5 {
-  @apply text-xl font-bold mt-2 mb-2;
+  @apply text-xl font-bold pb-2 mb-1;
 }
 
 h6 {
-  @apply text-lg font-bold mt-2 mb-1;
+  @apply text-lg font-bold pb-2 mb-1;
 }
 
-/* Can't apply w-16 ? */
+.flags-in-a-row { @apply flex flex-wrap text-center; }
+
+/* Can't apply w-16 */
 .flags-in-a-row > div {
   width: 4rem;
+  @apply m-1;
 }
 .flags-in-a-row.pennants > div {
   width: 5rem;

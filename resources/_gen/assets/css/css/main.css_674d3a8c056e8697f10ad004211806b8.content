@@ -31181,6 +31181,15 @@ video {
 @import "tailwindcss/utilities";
 */
 
+body {
+  --tw-text-opacity: 1;
+  color: rgba(31, 41, 55, var(--tw-text-opacity));
+}
+
+p {
+  padding-bottom: 0.75rem;
+}
+
 h1 {
   font-weight: 700;
   font-size: 3rem;
@@ -31229,12 +31238,18 @@ h6 {
   margin-top: 0.5rem;
 }
 
-/* Can't apply w-16 ? */
-
-.flags-in-a-row > div { width: 4rem;
+.flags-in-a-row { display: flex; flex-wrap: wrap; text-align: center;
 }
 
-.flags-in-a-row.pennants > div { width: 5rem;
+/* Can't apply w-16 */
+
+.flags-in-a-row > div {
+  width: 4rem;
+  margin: 0.25rem;
+}
+
+.flags-in-a-row.pennants > div {
+  width: 5rem;
 }
 
 @media (min-width: 640px) {

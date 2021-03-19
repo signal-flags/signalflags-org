@@ -12,21 +12,21 @@ list:
 
 designs:
   outline:
-    path: /images/sf-outline/
+    path: /sf-outline/
     dataUri: sfOutline
 
   noOutline:
-    path: /images/sf-no-outline/
+    path: /sf-no-outline/
     dataUri: sfNoOutline
 
   squareNoOutline:
-    path: /images/sf-square-no-outline/
+    path: /sf-square-no-outline/
     dataUri: sfSquareNoOutline
 
   squareOutline:
-    path: /images/sf-square-outline/
+    path: /sf-square-outline/
     dataUri: sfSquareOutline
 
   squareNoOutlinePrimary:
-    path: /images/sf-square-no-outline-primary/
+    path: /sf-square-no-outline-primary/
     dataUri: sfSquareNoOutlinePrimary

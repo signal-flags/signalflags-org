@@ -1,3 +1,21 @@
+# Flags are included in the following groups.
+groups:
+  # prettier-ignore
+  letters: [a, b, c, d, e, f, g, h, i, j, k, l, m, 'n', o, p, q, r, s, t, u, v, w, x, 'y', z]
+  numerals: [n1, n2, n3, n4, n5, n6, n7, n8, n9, n0]
+  pennants: [ap]
+  substitutes: [s1, s2, s3]
+  rrs:
+    - black
+
+    - red
+    - yellow
+
+    - green
+    - blue
+    - blackwhite
+    - greenwhite
+
 flags:
   a:
     abbr: A
@@ -64,8 +82,7 @@ flags:
     alt: Signal flag M
     group: letters
 
-  # n without quotes is evaluated as false.
-  'n':
+  'n': # n without quotes is evaluated as false.
     abbr: 'N'
     alt: Signal flag N
     group: letters
@@ -120,8 +137,7 @@ flags:
     alt: Signal flag X
     group: letters
 
-  # y without quotes is evaluated as true.
-  'y':
+  'y': # y without quotes is evaluated as true.
     abbr: 'Y'
     alt: Signal flag Y
     group: letters
@@ -183,9 +199,60 @@ flags:
     alt: Numeral 0 pennant
     group: numerals
 
-groups:
-  # prettier-ignore
-  letters: [a, b, c, d, e, f, g, h, i, j, k, l, m, 'n', o, p, q, r, s, t, u, v, w, x, 'y', z]
-  numerals: [n1, n2, n3, n4, n5, n6, n7, n8, n9, n0]
-  substitutes: [s1, s2, s3]
-  rrs: [red, green, greenwhite, black, blackwhite]
+  ap:
+    abbr: 'AP'
+    alt: Answering pennant
+    group: numerals
+
+  # --- Substitutes --------------------------------------------------------------
+
+  s1:
+    abbr: '1st sub'
+    alt: 1st substitute flag
+    group: substitutes
+
+  s2:
+    abbr: '2nd sub'
+    alt: 2nd substitute flag
+    group: substitutes
+
+  s3:
+    abbr: '3rd sub'
+    alt: 3rd substitute flag
+    group: substitutes
+
+  # --- Racing -------------------------------------------------------------------
+  black:
+    abbr: 'Black'
+    alt: Black flag
+    group: rrs
+
+  blackwhite:
+    abbr: 'B/W'
+    alt: Black and white flag
+    group: rrs
+
+  blue:
+    abbr: 'Blue'
+    alt: Blue flag
+    group: rrs
+
+  green:
+    abbr: 'Green'
+    alt: Green flag
+    group: rrs
+
+  greenwhite:
+    abbr: 'G/W'
+    alt: Green and white flag
+    group: rrs
+
+  red:
+    abbr: 'Red'
+    alt: Red flag
+    group: rrs
+
+  yellow:
+    abbr: 'Yellow'
+    alt: Yellow flag
+    group: rrs
