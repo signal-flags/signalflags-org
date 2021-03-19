@@ -14,7 +14,7 @@ const dataUri = true;
 const dataFiles = [
   ['sfOutline', { dataUri }],
   ['sfNoOutline', { dataUri, outline }],
-  ['sfSquareOutline', , { dataUri, shape }],
+  ['sfSquareOutline', { dataUri, shape }],
   ['sfSquareNoOutline', { dataUri, shape, outline }],
   ['sfSquareNoOutlinePrimary', { dataUri, colors, shape, outline }],
 ];
@@ -23,7 +23,7 @@ async function writeDataFiles() {
   const dataPath = join(__dirname, '..', 'data', 'sfDataUri');
   await rmdir(dataPath, { recursive: true });
   await mkdir(dataPath, { recursive: true });
-  const flags = sf.all({ dataUri: true });
+  // const flags = sf.all({ dataUri: true });
   dataFiles.forEach(async ([fname, options]) => {
     await writeFile(
       join(dataPath, `${fname}.json`),
