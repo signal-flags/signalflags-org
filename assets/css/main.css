@@ -49,3 +49,6 @@ h6 {
 .flags-in-a-row.pennants > div {
   width: 5rem;
 }
+.flags-in-a-row.square > div {
+  width: 3rem;
+}
