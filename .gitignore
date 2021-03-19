@@ -1,4 +1,6 @@
-
+# .gitignore
 node_modules
 
+# Ignore all build artifacts.
 resources/_gen
+# docs
