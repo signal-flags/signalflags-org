@@ -39,15 +39,20 @@ h6 {
   @apply text-lg font-bold pb-2 mb-1;
 }
 
-.flags-in-a-row { @apply flex flex-wrap text-center; }
+.flags-in-a-row {
+  @apply flex flex-wrap text-center;
+}
 
 /* Can't apply w-16 */
 .flags-in-a-row > div {
   width: 4rem;
-  @apply m-1;
+  @apply mr-2 my-1;
+}
+.flags-in-a-row.numerals > div {
+  width: 5rem;
 }
 .flags-in-a-row.pennants > div {
-  width: 5rem;
+  width: 8rem;
 }
 .flags-in-a-row.square > div {
   width: 3rem;

@@ -2,19 +2,24 @@
 groups:
   # prettier-ignore
   letters: [a, b, c, d, e, f, g, h, i, j, k, l, m, 'n', o, p, q, r, s, t, u, v, w, x, 'y', z]
-  numerals: [n1, n2, n3, n4, n5, n6, n7, n8, n9, n0]
+  numerals: [n1, n2, n3, n4, n5, n6, n7, n8, n9, n0, nap]
   pennants: [ap]
-  substitutes: [s1, s2, s3]
+  substitutes: [s1, s2, s3, s4]
   rrs:
     - black
 
     - red
     - yellow
-
     - green
     - blue
+    - orange
+
     - blackwhite
     - greenwhite
+    - plus
+    - minus
+    - port
+    - starboard
 
 flags:
   a:
@@ -199,60 +204,98 @@ flags:
     alt: Numeral 0 pennant
     group: numerals
 
-  ap:
-    abbr: 'AP'
+  nap:
+    abbr: AP
     alt: Answering pennant
     group: numerals
 
   # --- Substitutes --------------------------------------------------------------
 
+  ap:
+    abbr: AP
+    alt: Answering pennant
+    group: pennants
+
+  # --- Substitutes --------------------------------------------------------------
+
   s1:
-    abbr: '1st sub'
+    abbr: 1st sub
     alt: 1st substitute flag
     group: substitutes
 
   s2:
-    abbr: '2nd sub'
+    abbr: 2nd sub
     alt: 2nd substitute flag
     group: substitutes
 
   s3:
-    abbr: '3rd sub'
+    abbr: 3rd sub
     alt: 3rd substitute flag
     group: substitutes
 
+  s4:
+    abbr: 4th sub
+    alt: 4th substitute flag
+    group: substitutes
+
   # --- Racing -------------------------------------------------------------------
+
   black:
-    abbr: 'Black'
+    abbr: Black
     alt: Black flag
     group: rrs
 
   blackwhite:
-    abbr: 'B/W'
+    abbr: B/W
     alt: Black and white flag
     group: rrs
 
   blue:
-    abbr: 'Blue'
+    abbr: Blue
     alt: Blue flag
     group: rrs
 
   green:
-    abbr: 'Green'
+    abbr: Green
     alt: Green flag
     group: rrs
 
   greenwhite:
-    abbr: 'G/W'
+    abbr: G/W
     alt: Green and white flag
     group: rrs
 
+  minus:
+    abbr: '-'
+    alt: Minus flag
+    group: rrs
+
+  orange:
+    abbr: Orange
+    alt: Orange flag
+    group: rrs
+
+  plus:
+    abbr: +
+    alt: Plus flag
+    group: rrs
+
+  port:
+    abbr: Port
+    alt: "'Moved to port' flag"
+    group: rrs
+
   red:
-    abbr: 'Red'
+    abbr: Red
     alt: Red flag
     group: rrs
 
+  starboard:
+    abbr: Starboard
+    alt: "'Moved to starboard' flag"
+    group: rrs
+
   yellow:
-    abbr: 'Yellow'
+    abbr: Yellow
     alt: Yellow flag
     group: rrs

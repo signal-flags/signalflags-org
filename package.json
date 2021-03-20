@@ -9,7 +9,7 @@
     "build:signal-flags": "rm -rf data/signal-flags && node bin/build-signal-flags",
     "lint": "prettier . --check",
     "lint:fix": "prettier . --write",
-    "build:hugo": "rm -rf public && NODE_ENV=production hugo",
+    "build:hugo": "rm -rf signal-flags.github.io/docs && NODE_ENV=production hugo",
     "serve": "hugo server -D"
   },
   "keywords": [],
@@ -20,8 +20,8 @@
     "postcss": "^8.2.8",
     "postcss-cli": "^8.3.1",
     "prettier": "^2.2.1",
-    "signal-flag-images": "^2.2.0",
-    "signal-flags": "^2.1.0",
+    "signal-flag-images": "file:../signal-flag-images/",
+    "signal-flags": "file:../signal-flags-js/",
     "tailwindcss": "^2.0.4"
   }
 }

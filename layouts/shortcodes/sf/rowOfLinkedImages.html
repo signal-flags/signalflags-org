@@ -1,13 +1,13 @@
-{{ $dataUri := index $.Page.Site.Data.sfDesigns.designs (.Get 1) "dataUri" }}
-{{ $path := index $.Page.Site.Data.sfDesigns.designs (.Get 1) "path" }}
-{{ $flags := index $.Page.Site.Data.sfFlags.flags }}
-{{ $flagNames := index $.Page.Site.Data.sfFlags.groups (.Get 0) }}
-{{ range $flagNames}}
+{{ $dataUri := index $.Page.Site.Data.sfDesigns.designs (.Get 1) "dataUri" }} {{
+$path := index $.Page.Site.Data.sfDesigns.designs (.Get 1) "path" }} {{ $flags
+:= index $.Page.Site.Data.sfFlags.flags }} {{ $flagNames := index
+$.Page.Site.Data.sfFlags.groups (.Get 0) }} {{ range $flagNames}}
 <div>
   <div class="font-bold">{{ index $flags . "abbr" }}</div>
-  <a href="{{ $path }}{{ . }}.svg" download="{{ . }}"><img
-    src="{{ index $.Page.Site.Data.sfDataUri $dataUri . | safeURL }}"
-    alt='{{ index $flags . "alt" }}'
-/></a>
+  <a href="{{ $path }}{{ . }}.svg" download="{{ . }}"
+    ><img
+      src="{{ index $.Page.Site.Data.sfDataUri $dataUri . | safeURL }}"
+      alt='{{ index $flags . "alt" }}'
+  /></a>
 </div>
 {{ end }}
