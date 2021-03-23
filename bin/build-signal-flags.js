@@ -4,19 +4,35 @@ const { exec } = require('child_process');
 
 const sf = require('signal-flags');
 
-global.btoa = (b) => Buffer.from(b).toString('base64');
-
 const shape = 'square';
 const outline = false;
 const colors = 'primary';
 const dataUri = true;
 
 const dataFiles = [
-  ['sfOutline', { dataUri }],
-  ['sfNoOutline', { dataUri, outline }],
-  ['sfSquareOutline', { dataUri, shape }],
-  ['sfSquareNoOutline', { dataUri, shape, outline }],
-  ['sfSquareNoOutlinePrimary', { dataUri, colors, shape, outline }],
+  ['sfRectangleOutline', { dataUri, type: 'flag' }],
+  ['sfRectangleNoOutline', { dataUri, outline, type: 'flag' }],
+
+  ['sfSquareOutline', { dataUri, shape, type: 'flag' }],
+  ['sfSquareNoOutline', { dataUri, shape, outline, type: 'flag' }],
+  [
+    'sfSquareNoOutlinePrimary',
+    { dataUri, colors, shape, outline, type: 'flag' },
+  ],
+
+  ['sfPennantOutline', { dataUri, type: 'pennant' }],
+  ['sfPennantNoOutline', { dataUri, outline, type: 'pennant' }],
+  ['sfPennantNoOutlinePrimary', { dataUri, outline, colors, type: 'pennant' }],
+
+  ['sfLongOutline', { dataUri, type: 'pennant', shape: 'long' }],
+  ['sfLongNoOutline', { dataUri, outline, type: 'pennant', shape: 'long' }],
+
+  ['sfTriangleOutline', { dataUri, type: 'triangle' }],
+  ['sfTriangleNoOutline', { dataUri, outline, type: 'triangle' }],
+  [
+    'sfTriangleNoOutlinePrimary',
+    { dataUri, outline, colors, type: 'triangle' },
+  ],
 ];
 
 async function writeDataFiles() {

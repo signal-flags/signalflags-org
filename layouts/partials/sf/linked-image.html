@@ -1,2 +1,6 @@
-<img src='{{ index site.Data "sfDataUri" "sfOutline" .name | safeURL }}' />
-{{ index site.Data "sfDataUri" "sfOutline" .name }}
+{{ $design := index site.Data.sfDesigns.designs .design }}
+<a href="{{ $design.path }}{{ .key }}.svg" download="{{ .key }}"
+  ><img
+    src="{{ index site.Data.sfDataUri $design.dataUri .key | safeURL }}"
+    alt='{{ index site.Data.sfFlags.flags .key "alt" }}'
+/></a>

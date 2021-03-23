@@ -15,45 +15,73 @@ p {
   @apply pb-3;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold mb-3;
+}
 h1 {
-  @apply text-5xl font-bold pb-2 mb-1;
+  @apply text-5xl;
 }
 
 h2 {
-  @apply text-4xl font-bold pb-2 mb-1;
+  @apply text-4xl;
 }
 
 h3 {
-  @apply text-3xl font-bold pb-2 mb-1;
+  @apply text-3xl;
 }
 
 h4 {
-  @apply text-2xl font-bold pb-2 mb-1;
+  @apply text-2xl;
 }
 
 h5 {
-  @apply text-xl font-bold pb-2 mb-1;
+  @apply text-xl;
 }
 
 h6 {
-  @apply text-lg font-bold pb-2 mb-1;
+  @apply text-lg;
 }
 
 .flags-in-a-row {
-  @apply flex flex-wrap text-center;
+  @apply flex flex-wrap text-center mb-4;
 }
 
 /* Can't apply w-16 */
 .flags-in-a-row > div {
-  width: 4rem;
-  @apply mr-2 my-1;
+  width: 3rem;
+  @apply mr-2 mb-1;
 }
-.flags-in-a-row.numerals > div {
-  width: 5rem;
+.flags-in-a-row.triangles > div {
+  width: 3.75rem;
 }
 .flags-in-a-row.pennants > div {
-  width: 8rem;
+  width: 3.75rem;
+}
+.flags-in-a-row.long > div {
+  width: 6rem;
 }
 .flags-in-a-row.square > div {
   width: 3rem;
+  /* width: 2.25rem; */
+}
+
+.main-section-sticky-heading {
+  @apply sticky z-10 top-16 bg-white pt-1 pb-0;
+}
+
+.main-section-sticky-heading > * {
+  @apply bg-gray-400 rounded px-2 py-1;
+}
+
+.sub-section-sticky-heading {
+  @apply sticky top-28 bg-white py-1;
+}
+
+.sub-section-sticky-heading > * {
+  @apply bg-gray-300 rounded px-2 py-1;
 }

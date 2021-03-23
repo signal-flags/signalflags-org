@@ -1,9 +1,8 @@
 # Flags are included in the following groups.
 groups:
   # prettier-ignore
-  letters: [a, b, c, d, e, f, g, h, i, j, k, l, m, 'n', o, p, q, r, s, t, u, v, w, x, 'y', z]
-  numerals: [n1, n2, n3, n4, n5, n6, n7, n8, n9, n0, nap]
-  pennants: [ap]
+  alphabet: [a, b, c, d, e, f, g, h, i, j, k, l, m, 'n', o, p, q, r, s, t, u, v, w, x, 'y', z]
+  numerals: [n1, n2, n3, n4, n5, n6, n7, n8, n9, n0, ap]
   substitutes: [s1, s2, s3, s4]
   rrs:
     - black
@@ -25,132 +24,132 @@ flags:
   a:
     abbr: A
     alt: Signal flag A
-    group: letters
+    group: alphabet
 
   b:
     abbr: B
     alt: Signal flag B
-    group: letters
+    group: alphabet
 
   c:
     abbr: C
     alt: Signal flag C
-    group: letters
+    group: alphabet
 
   d:
     abbr: D
     alt: Signal flag D
-    group: letters
+    group: alphabet
 
   e:
     abbr: E
     alt: Signal flag E
-    group: letters
+    group: alphabet
 
   f:
     abbr: F
     alt: Signal flag F
-    group: letters
+    group: alphabet
 
   g:
     abbr: G
     alt: Signal flag G
-    group: letters
+    group: alphabet
 
   h:
     abbr: H
     alt: Signal flag H
-    group: letters
+    group: alphabet
 
   i:
     abbr: I
     alt: Signal flag I
-    group: letters
+    group: alphabet
 
   j:
     abbr: J
     alt: Signal flag J
-    group: letters
+    group: alphabet
 
   k:
     abbr: K
     alt: Signal flag K
-    group: letters
+    group: alphabet
 
   l:
     abbr: L
     alt: Signal flag L
-    group: letters
+    group: alphabet
 
   m:
     abbr: M
     alt: Signal flag M
-    group: letters
+    group: alphabet
 
   'n': # n without quotes is evaluated as false.
     abbr: 'N'
     alt: Signal flag N
-    group: letters
+    group: alphabet
 
   o:
     abbr: O
     alt: Signal flag O
-    group: letters
+    group: alphabet
 
   p:
     abbr: P
     alt: Signal flag P
-    group: letters
+    group: alphabet
 
   q:
     abbr: Q
     alt: Signal flag Q
-    group: letters
+    group: alphabet
 
   r:
     abbr: R
     alt: Signal flag R
-    group: letters
+    group: alphabet
 
   s:
     abbr: S
     alt: Signal flag S
-    group: letters
+    group: alphabet
 
   t:
     abbr: T
     alt: Signal flag T
-    group: letters
+    group: alphabet
 
   u:
     abbr: U
     alt: Signal flag U
-    group: letters
+    group: alphabet
 
   v:
     abbr: V
     alt: Signal flag V
-    group: letters
+    group: alphabet
 
   w:
     abbr: W
     alt: Signal flag W
-    group: letters
+    group: alphabet
 
   x:
     abbr: X
     alt: Signal flag X
-    group: letters
+    group: alphabet
 
   'y': # y without quotes is evaluated as true.
     abbr: 'Y'
     alt: Signal flag Y
-    group: letters
+    group: alphabet
 
   z:
     abbr: Z
     alt: Signal flag Z
-    group: letters
+    group: alphabet
 
   # --- Numerals ---------------------------------------------------------------
 
@@ -204,44 +203,37 @@ flags:
     alt: Numeral 0 pennant
     group: numerals
 
-  nap:
+  ap:
     abbr: AP
     alt: Answering pennant
     group: numerals
 
   # --- Substitutes --------------------------------------------------------------
 
-  ap:
-    abbr: AP
-    alt: Answering pennant
-    group: pennants
-
-  # --- Substitutes --------------------------------------------------------------
-
   s1:
-    abbr: 1st sub
+    abbr: 1st
     alt: 1st substitute flag
     group: substitutes
 
   s2:
-    abbr: 2nd sub
+    abbr: 2nd
     alt: 2nd substitute flag
     group: substitutes
 
   s3:
-    abbr: 3rd sub
+    abbr: 3rd
     alt: 3rd substitute flag
     group: substitutes
 
   s4:
-    abbr: 4th sub
+    abbr: 4th
     alt: 4th substitute flag
     group: substitutes
 
   # --- Racing -------------------------------------------------------------------
 
   black:
-    abbr: Black
+    abbr: Bk
     alt: Black flag
     group: rrs
 
@@ -251,12 +243,12 @@ flags:
     group: rrs
 
   blue:
-    abbr: Blue
+    abbr: Bu
     alt: Blue flag
     group: rrs
 
   green:
-    abbr: Green
+    abbr: Gn
     alt: Green flag
     group: rrs
 
@@ -271,7 +263,7 @@ flags:
     group: rrs
 
   orange:
-    abbr: Orange
+    abbr: Or
     alt: Orange flag
     group: rrs
 
@@ -286,16 +278,16 @@ flags:
     group: rrs
 
   red:
-    abbr: Red
+    abbr: Rd
     alt: Red flag
     group: rrs
 
   starboard:
-    abbr: Starboard
+    abbr: Stbd
     alt: "'Moved to starboard' flag"
     group: rrs
 
   yellow:
-    abbr: Yellow
+    abbr: Yw
     alt: Yellow flag
     group: rrs

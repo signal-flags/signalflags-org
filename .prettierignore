@@ -1,7 +1,11 @@
 # .prettierignore
 
-/resources/_gen
+# Makes a mess of layouts.
+/layouts/partials
+/layouts/shortcodes
 
+# Generated files.
+/resources/_gen
 /docs/css
 
 # Old site imported css.

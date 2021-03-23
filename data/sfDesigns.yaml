@@ -3,30 +3,61 @@
 #  alt='{{ index $.Page.Site.Data.sfFlags.flags (.Get 0) "alt" }}'
 #  /></a>
 
-list:
-  - outline
-  - noOutline
-  - squareOutline
-  - squareNoOutline
-  - squareNoOutlinePrimary
-
 designs:
-  outline:
-    path: /sf-outline/
-    dataUri: sfOutline
+  # Outline --------------------------------------------------------------------
 
-  noOutline:
-    path: /sf-no-outline/
-    dataUri: sfNoOutline
-
-  squareNoOutline:
-    path: /sf-square-no-outline/
-    dataUri: sfSquareNoOutline
+  rectangleOutline:
+    path: /sf-rectangle-outline/
+    dataUri: sfRectangleOutline
 
   squareOutline:
     path: /sf-square-outline/
     dataUri: sfSquareOutline
 
+  pennantOutline:
+    path: /sf-pennant-outline/
+    dataUri: sfPennantOutline
+
+  longOutline:
+    path: /sf-long-outline/
+    dataUri: sfLongOutline
+
+  triangleOutline:
+    path: /sf-triangle-outline/
+    dataUri: sfTriangleOutline
+
+  # No outline -----------------------------------------------------------------
+
+  rectangleNoOutline:
+    path: /sf-rectangle-no-outline/
+    dataUri: sfRectangleNoOutline
+
+  squareNoOutline:
+    path: /sf-square-no-outline/
+    dataUri: sfSquareNoOutline
+
+  pennantNoOutline:
+    path: /sf-pennant-no-outline/
+    dataUri: sfPennantNoOutline
+
+  longNoOutline:
+    path: /sf-long-no-outline/
+    dataUri: sfLongNoOutline
+
+  triangleNoOutline:
+    path: /sf-triangle-no-outline/
+    dataUri: sfTriangleNoOutline
+
+  # No outline primary colours -------------------------------------------------
+
   squareNoOutlinePrimary:
     path: /sf-square-no-outline-primary/
     dataUri: sfSquareNoOutlinePrimary
+
+  pennantNoOutlinePrimary:
+    path: /sf-pennant-no-outline-primary/
+    dataUri: sfPennantNoOutlinePrimary
+
+  triangleNoOutlinePrimary:
+    path: /sf-triangle-no-outline-primary/
+    dataUri: sfTriangleNoOutlinePrimary
