@@ -8,8 +8,15 @@
 @import "tailwindcss/utilities";
 */
 body {
-  @apply text-gray-800;
 }
+
+.front-section-1 { background: #224c73; }
+.front-section-2 { background: #c7b5a7; }
+.front-section-3 { background: #736422; }
+.front-footer { background: #2d2926; }
+
+.site-header { background: #224c73; @apply text-white; }
+.site-footer { background: #2d2926; @apply text-white; }
 
 p {
   @apply pb-3;
@@ -85,3 +92,11 @@ h6 {
 .sub-section-sticky-heading > * {
   @apply bg-gray-300 rounded px-2 py-1;
 }
+
+.nav-menu-item { @apply inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium }
+.nav-menu-item.active { @apply bg-gray-900 text-white }
+
+/* Outline heroicons are designed for 24px; let them scale up. */
+.icon svg { height: 1.5em; min-height: 24px; }
+
+.nowhere { @apply sm:hidden }

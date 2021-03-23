@@ -1,0 +1,36 @@
+
+<nav class="fixed z-50 w-full flex flex-wrap items-center justify-between site-header">
+  <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+    <div class="w-full relative flex justify-between sm:w-auto sm:static sm:block sm:justify-start">
+      <a class="text-lg py-3 inline-block mr-4 whitespace-no-wrap text-white" href="/">
+        signalflags.org
+      </a>
+      <button class="text-white cursor-pointer text-xl leading-none pt-3 m-0 pb-0 block sm:hidden focus:outline-none" type="button" onclick="toggleNavbar('example-collapse-navbar')">
+        {{ partial "icon" "menu" }}
+      </button>
+    </div>
+    <div class="sm:flex flex-grow items-center hidden" id="example-collapse-navbar">
+      <ul class="flex flex-col sm:flex-row list-none sm:ml-auto">
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center leading-snug text-white hover:opacity-75" href="#pablo">
+            {{ partial "icon" "download" }}
+            Download
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="px-3 py-2 flex items-center leading-snug text-white hover:opacity-75" href="#pablo">
+            {{ partial "icon" "info" }}
+            About
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+  function toggleNavbar(collapseID){
+    document.getElementById(collapseID).classList.toggle("hidden");
+    document.getElementById(collapseID).classList.toggle("flex");
+  }
+</script>
