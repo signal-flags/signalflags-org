@@ -93,8 +93,10 @@ h6 {
   @apply bg-gray-300 rounded px-2 py-1;
 }
 
-.nav-menu-item { @apply inline-block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium }
+.nav-menu-item { @apply flex p-2 sm:py-1 sm:my-1 sm:mx-2 text-gray-300 hover:bg-gray-700 hover:text-gray-100 rounded-md }
 .nav-menu-item.active { @apply bg-gray-900 text-white }
+
+
 
 /* Outline heroicons are designed for 24px; let them scale up. */
 .icon svg { height: 1.5em; min-height: 24px; }
