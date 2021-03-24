@@ -10,17 +10,32 @@
 body {
 }
 
-.front-section-1 { background: #224c73; }
-.front-section-2 { background: #c7b5a7; }
-.front-section-3 { background: #736422; }
-.front-footer { background: #2d2926; }
+.front-section-1 {
+  background: #224c73;
+}
+.front-section-2 {
+  background: #c7b5a7;
+}
+.front-section-3 {
+  background: #736422;
+}
+.front-footer {
+  background: #2d2926;
+}
 
-.site-header { background: #224c73; @apply text-white; }
-.site-footer { background: #2d2926; @apply text-white; }
-
+.site-header {
+  background: #224c73;
+  @apply text-white;
+}
+.site-footer {
+  background: #2d2926;
+  @apply text-white;
+}
+/*
 p {
   @apply pb-3;
 }
+
 
 h1,
 h2,
@@ -53,6 +68,7 @@ h5 {
 h6 {
   @apply text-lg;
 }
+*/
 
 .flags-in-a-row {
   @apply flex flex-wrap text-center mb-4;
@@ -78,7 +94,8 @@ h6 {
 }
 
 .main-section-sticky-heading {
-  @apply sticky z-10 top-16 bg-white pt-1 pb-0;
+  top: 2.5rem;
+  @apply sticky z-10 bg-white pt-1 pb-0;
 }
 
 .main-section-sticky-heading > * {
@@ -86,19 +103,33 @@ h6 {
 }
 
 .sub-section-sticky-heading {
-  @apply sticky top-28 bg-white py-1;
+  top: 5.5rem;
+  @apply sticky bg-white py-1;
 }
 
 .sub-section-sticky-heading > * {
   @apply bg-gray-300 rounded px-2 py-1;
 }
 
-.nav-menu-item { @apply flex p-2 sm:py-1 sm:my-1 sm:mx-2 text-gray-300 hover:bg-gray-700 hover:text-gray-100 rounded-md }
-.nav-menu-item.active { @apply bg-gray-900 text-white }
+.nav-menu-item {
+  @apply flex py-2 sm:mx-2 hover:opacity-80;
+}
+.nav-menu-item.active {
+  @apply bg-gray-900 text-white;
+}
 
+xarticle table {
+  border: 1px solid #ccc;
+  @apply mb-4;
+}
 
+xarticle table td, xarticle table th {
+  border: 1px solid #ccc;
+  @apply px-2;
+}
 
 /* Outline heroicons are designed for 24px; let them scale up. */
-.icon svg { height: 1.5em; min-height: 24px; }
-
-.nowhere { @apply sm:hidden }
+.icon svg {
+  height: 1.5em;
+  min-height: 24px;
+}

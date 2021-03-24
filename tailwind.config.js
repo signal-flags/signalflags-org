@@ -6,6 +6,12 @@ module.exports = {
   },
   variants: {
     extend: {},
+    // Responsive typography is not a good idea.
+    // typography: [],
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')({
+      modifiers: [],
+    }),
+  ],
 };

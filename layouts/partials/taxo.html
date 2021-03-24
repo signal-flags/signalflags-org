@@ -1,32 +1,7 @@
-{{ define "main" }}
-<div class="container px-4 pt-20 mx-auto">
-  <h1 id="title">{{ .Title }}</h1>
-  <article id="content">{{ .Content }}</article>
-
-  This is a term.
-<pre>
-Singular name: {{ .Data.Singular }}
-Plural name: {{ .Data.Plural }}
-Plural name: {{ .Data.Plural }}
-List of pages: {{ .Data.Pages }}
-Taxonomy: {{ .Data.Terms }}
-Taxonomy sorted: {{ .Data.Terms.Alphabetical }}
-Taxonomy by count: {{ .Data.Terms.byCount }}
-
-<ul>
-{{ range $page := .Data.Pages }}
-{{ .RelPermalink}}{{ .Permalink}}{{ .LinkTitle }}
-  <li hugo-nav="{{ .RelPermalink}}">
-      <a href="{{ .Permalink}}">{{ .LinkTitle }}</a>
-  </li>
-{{ end }}
-</ul>
-
-</pre>
-
-  <section>
+aaaa
+<section>
     <ul id="all-taxonomies">
-        {{ range $taxonomy_term, $taxonomy := .Data.Terms }}asss
+        {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}
             {{ with $.Site.GetPage (printf "/%s" $taxonomy_term) }}
                 <li><a href="{{ .Permalink }}">{{ $taxonomy_term }}</a>
                     <ul>
@@ -46,5 +21,4 @@ Taxonomy by count: {{ .Data.Terms.byCount }}
         {{ end }}
     </ul>
 </section>
-</div>
-{{ end }}
+aaaa
