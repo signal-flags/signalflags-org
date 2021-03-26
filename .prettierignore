@@ -6,10 +6,10 @@
 
 # Generated files.
 /resources/_gen
-/docs/css
+/signal-flags.github.io/docs/css
 
 # Old site imported css.
 /signal-flags.github.io/docs/assets/app/app-eoh58.min.css
 /static/assets/app/app-eoh58.min.css
 
-/signal-flags.github.io/docs/css/main.min.*
+

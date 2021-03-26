@@ -1,0 +1,30 @@
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>{{ .Title }}</title>
+{{/* <meta name="description"
+    content="Website meta description for google search results go here" /> */}}
+{{/* <meta name="theme-color" content="#1A94D2" /> */}}
+
+<!-- This will inline css on every page. -->
+{{/* $styles := resources.Get "sass/main.scss" | toCSS | postCSS | minify }}
+    <style>
+        {{- $styles.Content | safeCSS -}}
+    </style> */}}
+
+<!-- External stylesheet. -->
+{{ $main := resources.Get "sass/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | postCSS}}
+<link rel="stylesheet" href="{{ $main.RelPermalink }}">
+
+<!-- 
+    include a favicon for your site if you have it, else omit the line below 
+    Location of favicon can be in mytheme/static/favicon.ico
+-->
+<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+
+  {{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
+  {{ $js := slice $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
+
+  <script src="{{$js.RelPermalink}}" defer></script>
+  

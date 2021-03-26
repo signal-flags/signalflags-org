@@ -1,0 +1,15 @@
+{{/* themes/sf-theme/layouts/tag/terms.html */}} {{ define "main" }}
+<!-- List all the tags. -->
+<div class="container page-container">
+  <h1 id="title">{{ .Title }}</h1>
+  <div id="content">{{ .Content }}</article>
+  <section>
+    {{ range $term, $pages := .Site.Taxonomies.tags -}}
+    <a class="me-2 btn btn-outline-secondary btn-sm rounded-pill" href="/tags/{{ $term }}"
+    >{{ $term }} <span
+      class="badge bg-secondary rounded-pill"
+    >{{ $pages | len }}</span><span class="visually-hidden"> pages</span></a>
+    {{- end }}
+  </section>
+</div>
+{{ end }}

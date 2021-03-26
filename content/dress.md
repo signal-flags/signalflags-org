@@ -1,6 +1,6 @@
 ---
 title: Dress flags
-tags: blue
+tags: [blue]
 draft: true
 ---
 

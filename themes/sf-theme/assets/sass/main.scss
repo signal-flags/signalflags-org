@@ -1,13 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-/*
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-*/
-body {
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Layout.
+#content {
+  // Clear top nav.
+  padding-top: 40px;
+}
+
+// Make it a bit smaller.
+.navbar-toggler {
+  font-size: 1rem;
+  padding: 0.125rem 0.25rem;
+  margin: 0.375rem 0 0.25rem;
+}
+
+// Category label links.
+.badge.category {
+  background: #cccccc;
+}
+
+.badge.tag { background: #ccc }
+
+// Tag label links.
+
+
+.bg-site-nav {
+  background: #224c73;
+  // @apply text-white;
 }
 
 .front-section-1 {
@@ -23,61 +42,19 @@ body {
   background: #2d2926;
 }
 
-.site-header {
-  background: #224c73;
-  @apply text-white;
-}
 .site-footer {
   background: #2d2926;
-  @apply text-white;
+  // @apply text-white;
 }
-/*
-p {
-  @apply pb-3;
-}
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply font-bold mb-3;
-}
-h1 {
-  @apply text-5xl;
-}
-
-h2 {
-  @apply text-4xl;
-}
-
-h3 {
-  @apply text-3xl;
-}
-
-h4 {
-  @apply text-2xl;
-}
-
-h5 {
-  @apply text-xl;
-}
-
-h6 {
-  @apply text-lg;
-}
-*/
 
 .flags-in-a-row {
-  @apply flex flex-wrap text-center mb-4;
+  display: flex; flex-wrap: wrap; text-align: center; // flex-wrap text-center mb-4;
 }
 
 /* Can't apply w-16 */
 .flags-in-a-row > div {
-  width: 3rem;
-  @apply mr-2 mb-1;
+  width: 3rem; margin-right: 1em;
+  // @apply mr-2 mb-1;
 }
 .flags-in-a-row.triangles > div {
   width: 3.75rem;
@@ -94,8 +71,8 @@ h6 {
 }
 
 .main-section-sticky-heading {
-  top: 2.5rem;
-  @apply sticky z-10 bg-white pt-1 pb-0;
+  top: 56px; position: sticky; background: #ccc;
+  // @apply sticky z-10 bg-white pt-1 pb-0;
 }
 
 .main-section-sticky-heading > * {
