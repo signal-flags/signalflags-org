@@ -18,9 +18,9 @@ designs:
     path: /sf-pennant-outline/
     dataUri: sfPennantOutline
 
-  longOutline:
-    path: /sf-long-outline/
-    dataUri: sfLongOutline
+  shortOutline:
+    path: /sf-short-outline/
+    dataUri: sfShortOutline
 
   triangleOutline:
     path: /sf-triangle-outline/
@@ -40,9 +40,9 @@ designs:
     path: /sf-pennant-no-outline/
     dataUri: sfPennantNoOutline
 
-  longNoOutline:
-    path: /sf-long-no-outline/
-    dataUri: sfLongNoOutline
+  shortNoOutline:
+    path: /sf-short-no-outline/
+    dataUri: sfShortNoOutline
 
   triangleNoOutline:
     path: /sf-triangle-no-outline/

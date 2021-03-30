@@ -1,7 +1,10 @@
+/*! Site styles */
 
 @import "node_modules/bootstrap/scss/bootstrap";
+/*! Site styles 2
+ */
 
-// Layout.
+ // Layout.
 #content {
   // Clear top nav.
   padding-top: 40px;
@@ -14,6 +17,17 @@
   margin: 0.375rem 0 0.25rem;
 }
 
+.contrast {
+  color: #000;
+  background: #d7cfc7;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.contrast.contrast-1 {
+  background: #e7dfd7;
+}
+
 // Category label links.
 .badge.category {
   background: #cccccc;
@@ -22,7 +36,6 @@
 .badge.tag { background: #ccc }
 
 // Tag label links.
-
 
 .bg-site-nav {
   background: #224c73;
@@ -53,60 +66,28 @@
 
 /* Can't apply w-16 */
 .flags-in-a-row > div {
-  width: 3rem; margin-right: 1em;
+  position: relative;
+  margin: 0 0.625rem 0.625rem 0;
+  padding-top: 0.625rem;
+  width: 4rem;
   // @apply mr-2 mb-1;
 }
-.flags-in-a-row.triangles > div {
-  width: 3.75rem;
+.flags-in-a-row.triangle > div {
+  width: 4rem;
 }
-.flags-in-a-row.pennants > div {
-  width: 3.75rem;
-}
-.flags-in-a-row.long > div {
+.flags-in-a-row.pennant > div {
   width: 6rem;
+}
+.flags-in-a-row.short > div {
+  width: 5rem;
 }
 .flags-in-a-row.square > div {
   width: 3rem;
   /* width: 2.25rem; */
 }
 
-.main-section-sticky-heading {
-  top: 56px; position: sticky; background: #ccc;
-  // @apply sticky z-10 bg-white pt-1 pb-0;
-}
-
-.main-section-sticky-heading > * {
-  @apply bg-gray-400 rounded px-2 py-1;
-}
-
-.sub-section-sticky-heading {
-  top: 5.5rem;
-  @apply sticky bg-white py-1;
-}
-
-.sub-section-sticky-heading > * {
-  @apply bg-gray-300 rounded px-2 py-1;
-}
-
-.nav-menu-item {
-  @apply flex py-2 sm:mx-2 hover:opacity-80;
-}
-.nav-menu-item.active {
-  @apply bg-gray-900 text-white;
-}
-
-xarticle table {
-  border: 1px solid #ccc;
-  @apply mb-4;
-}
-
-xarticle table td, xarticle table th {
-  border: 1px solid #ccc;
-  @apply px-2;
-}
-
-/* Outline heroicons are designed for 24px; let them scale up. */
-.icon svg {
-  height: 1.5em;
-  min-height: 24px;
+.flags-in-a-row .badge {
+  color: $body-color;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid $body-color;
 }

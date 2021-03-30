@@ -2,7 +2,7 @@ baseURL: https://signalflags.org/
 languageCode: en-gb
 title: Signal Flags
 # publishDir: signal-flags.github.io/docs
-relativeURLS: true
+# relativeURLS: true
 theme: sf-theme
 
 params:

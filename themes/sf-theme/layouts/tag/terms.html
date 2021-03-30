@@ -2,7 +2,7 @@
 <!-- List all the tags. -->
 <div class="container page-container">
   <h1 id="title">{{ .Title }}</h1>
-  <div id="content">{{ .Content }}</article>
+  <div id="content">{{ .Content }}</div>
   <section>
     {{ range $term, $pages := .Site.Taxonomies.tags -}}
     <a class="me-2 btn btn-outline-secondary btn-sm rounded-pill" href="/tags/{{ $term }}"

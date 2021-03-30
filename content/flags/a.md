@@ -1,7 +1,7 @@
 ---
 title: Alphabet flag A
 layout: flag-page.html
-flagKey: b
+flagKey: a
 # date: 2013-01-01 20:00:00
 rectangleOutline: true
 squareOutline: true

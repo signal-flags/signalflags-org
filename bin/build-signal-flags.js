@@ -24,8 +24,8 @@ const dataFiles = [
   ['sfPennantNoOutline', { dataUri, outline, type: 'pennant' }],
   ['sfPennantNoOutlinePrimary', { dataUri, outline, colors, type: 'pennant' }],
 
-  ['sfShortOutline', { dataUri, type: 'pennant', shape: 'long' }],
-  ['sfShortNoOutline', { dataUri, outline, type: 'pennant', shape: 'long' }],
+  ['sfShortOutline', { dataUri, type: 'pennant', shape: 'short' }],
+  ['sfShortNoOutline', { dataUri, outline, type: 'pennant', shape: 'short' }],
 
   ['sfTriangleOutline', { dataUri, type: 'triangle' }],
   ['sfTriangleNoOutline', { dataUri, outline, type: 'triangle' }],

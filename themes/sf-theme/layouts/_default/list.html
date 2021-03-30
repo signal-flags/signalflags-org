@@ -1,4 +1,7 @@
 {{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .RelPermalink }}
+{{ .Content }}
     <div class="archive {{ with .Site.Params.doNotLoadAnimations }} . {{ else }} animated fadeInDown {{ end }}">
         <ul class="list-with-title">
             {{ range .Data.Pages.GroupByDate "2006" }}

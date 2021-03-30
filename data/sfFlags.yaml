@@ -15,10 +15,10 @@ groups:
 
     - blackwhite
     - greenwhite
-    - plus
-    - minus
-    - port
-    - starboard
+    - increase
+    - decrease
+    - toport
+    - tostarboard
 
 flags:
   a:
@@ -257,7 +257,7 @@ flags:
     alt: Green and white flag
     group: rrs
 
-  minus:
+  decrease:
     abbr: '-'
     alt: Minus flag
     group: rrs
@@ -267,13 +267,13 @@ flags:
     alt: Orange flag
     group: rrs
 
-  plus:
+  increase:
     abbr: +
     alt: Plus flag
     group: rrs
 
-  port:
-    abbr: Port
+  toport:
+    abbr: ToPort
     alt: "'Moved to port' flag"
     group: rrs
 
@@ -282,8 +282,8 @@ flags:
     alt: Red flag
     group: rrs
 
-  starboard:
-    abbr: Stbd
+  tostarboard:
+    abbr: ToStbd
     alt: "'Moved to starboard' flag"
     group: rrs
 
