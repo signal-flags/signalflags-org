@@ -1,13 +1,17 @@
 {{ define "main" }}
 <div class="container px-4 pt-20 mx-auto">
+{{- if .Content -}}
   <h1 id="title">{{ .Title }}</h1>
   <article id="content">{{ .Content }}</article>
+{{- else -}}
+  <h1 id="title">Pages in the '{{ .Title }}' {{ .Data.Singular }}</h1>
+{{- end -}}
 
-  This is a term.
+<p>Pages in the {{ .Data.Singular }} {{ .Data.Singular }}
 <pre>
 Singular name: {{ .Data.Singular }}
 Plural name: {{ .Data.Plural }}
-Plural name: {{ .Data.Plural }}
+Term: {{ .Data.Term }}
 List of pages: {{ .Data.Pages }}
 Taxonomy: {{ .Data.Terms }}
 Taxonomy sorted: {{ .Data.Terms.Alphabetical }}

@@ -1,24 +1,21 @@
 {{ define "main" }}
+
 <h1>{{ .Title }}</h1>
-{{ .RelPermalink }}
-{{ .Content }}
-    <div class="archive {{ with .Site.Params.doNotLoadAnimations }} . {{ else }} animated fadeInDown {{ end }}">
-        <ul class="list-with-title">
-            {{ range .Data.Pages.GroupByDate "2006" }}
-                <div class="listing-title">{{ .Key }}</div>
-                {{ range .Pages }}
-                    <ul class="listing">
-                        <div class="listing-item">
-                            <div class="listing-post"><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
-                                <div class="post-time"><span class="date">{{ if isset .Site.Params "listdateformat" }} 
-                                                                            {{ .Date.Format .Site.Params.listDateFormat }}
-                                                                            {{ else }} {{.Date.Format "Jan 2"}} 
-                                                                            {{ end }}</span></div>
-                            </div>
-                        </div>
-                    </ul>
-                {{ end }}
-            {{ end }}
-        </ul>
-    </div>
+
+<div class="row">
+  <div
+    {{ if not .Params.hideSidebar }}class="col-lg-8"
+    {{ end }}
+  >
+    {{ .Content }}
+  </div>
+  {{ if not .Params.hideSidebar }}
+  <div class="col-lg-4">
+    {{ if and .Pages (not .Params.hidePageList) }}
+    {{ partial "list-of-pages.html" (dict "ctx" . "listTitle" "Pages in this section") }}
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+
 {{ end }}

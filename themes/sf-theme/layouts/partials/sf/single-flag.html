@@ -1,0 +1,16 @@
+
+{{ $key := .key                                                               }}
+{{ $design := index .ctx.Site.Data.sfDesigns.designs .folder                  }}
+{{ $flag := index .ctx.Site.Data.sfFlags.flags .key                           }}
+
+<div class="single-flag {{ $design.shape }}">
+  <div>
+    <a
+      href="/{{ $design.path }}/{{ $key }}.svg"
+      download="{{ $key }}"
+      ><img
+        src="/{{ $design.path }}/{{ $key }}.svg"
+        alt='{{ $flag.alt }}'
+      /></a>
+  </div>
+</div>

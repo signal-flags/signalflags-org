@@ -16,13 +16,14 @@
   "author": "",
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.8",
     "postcss-cli": "^8.3.1",
     "prettier": "^2.2.1",
-    "signal-flag-images": "file:../signal-flag-images/",
-    "signal-flags": "file:../signal-flags-js/"
+    "signal-flag-images": "^3.0.0",
+    "signal-flags": "^2.4.0"
   },
   "dependencies": {
     "bootstrap": "^5.0.0-beta3"

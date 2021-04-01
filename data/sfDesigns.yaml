@@ -1,63 +1,72 @@
-# <a href='/images/sf-outline/{{ (.Get 0) }}.svg'>
-#  src='{{ index $.Page.Site.Data.sfDataUri.sfOutline (.Get 0) | safeURL }}'
-#  alt='{{ index $.Page.Site.Data.sfFlags.flags (.Get 0) "alt" }}'
-#  /></a>
 
 designs:
   # Outline --------------------------------------------------------------------
 
   rectangleOutline:
-    path: /sf-rectangle-outline/
+    path: sf-rectangle-outline
     dataUri: sfRectangleOutline
+    shape: rectangle
 
   squareOutline:
-    path: /sf-square-outline/
+    path: sf-square-outline
     dataUri: sfSquareOutline
+    shape: square
 
   pennantOutline:
-    path: /sf-pennant-outline/
+    path: sf-pennant-outline
     dataUri: sfPennantOutline
+    shape: pennant
 
   shortOutline:
-    path: /sf-short-outline/
+    path: sf-short-outline
     dataUri: sfShortOutline
+    shape: short
 
   triangleOutline:
-    path: /sf-triangle-outline/
+    path: sf-triangle-outline
     dataUri: sfTriangleOutline
+    shape: triangle
 
   # No outline -----------------------------------------------------------------
 
   rectangleNoOutline:
-    path: /sf-rectangle-no-outline/
+    path: sf-rectangle-no-outline
     dataUri: sfRectangleNoOutline
+    shape: rectangle
 
   squareNoOutline:
-    path: /sf-square-no-outline/
+    path: sf-square-no-outline
     dataUri: sfSquareNoOutline
+    shape: square
 
   pennantNoOutline:
-    path: /sf-pennant-no-outline/
+    path: sf-pennant-no-outline
     dataUri: sfPennantNoOutline
+    shape: pennant
 
   shortNoOutline:
-    path: /sf-short-no-outline/
+    path: sf-short-no-outline
     dataUri: sfShortNoOutline
+    shape: short
 
   triangleNoOutline:
-    path: /sf-triangle-no-outline/
+    path: sf-triangle-no-outline
     dataUri: sfTriangleNoOutline
+    shape: triangle
 
   # No outline primary colours -------------------------------------------------
 
   squareNoOutlinePrimary:
-    path: /sf-square-no-outline-primary/
+    path: sf-square-no-outline-primary
     dataUri: sfSquareNoOutlinePrimary
+    shape: square
 
   pennantNoOutlinePrimary:
-    path: /sf-pennant-no-outline-primary/
+    path: sf-pennant-no-outline-primary
     dataUri: sfPennantNoOutlinePrimary
+    shape: short
 
   triangleNoOutlinePrimary:
-    path: /sf-triangle-no-outline-primary/
+    path: sf-triangle-no-outline-primary
     dataUri: sfTriangleNoOutlinePrimary
+    shape: triangle

@@ -1,9 +1,17 @@
 baseURL: https://signalflags.org/
 languageCode: en-gb
 title: Signal Flags
-# publishDir: signal-flags.github.io/docs
+publishDir: signal-flags.github.io/docs
 # relativeURLS: true
 theme: sf-theme
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+        title: true
+    renderer:
+      unsafe: true
 
 params:
   showWordCount: false
@@ -13,3 +21,22 @@ module:
   mounts:
     source: node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
     target: assets/js/bootstrap.bundle.min.js
+
+menus:
+  nav:
+    -
+      name: Flags
+      url: /flags/
+      weight: 100
+    -
+      name: Download
+      url: /download/
+      weight: 200
+    -
+      name: About
+      url: /about/
+      weight: 400
+    -
+      name: Help
+      url: /help/
+      weight: 500

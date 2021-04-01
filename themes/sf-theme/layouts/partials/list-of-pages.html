@@ -1,0 +1,10 @@
+<div class="card">
+<div class="card-header h5">{{ .listTitle}}</div>
+
+<div class="list-of-pages list-group list-group-flush">
+  {{ range .ctx.Pages }}
+  <a href="{{ .Permalink }}" class="list-group-item list-group-item-action">{{ .Title }}</a>
+  {{ end }}
+</div>
+
+</div>

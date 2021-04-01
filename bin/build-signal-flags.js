@@ -35,6 +35,7 @@ const dataFiles = [
   ],
 ];
 
+// Write DataURI files to data/sfDataUri.
 async function writeDataFiles() {
   const dataPath = join(__dirname, '..', 'data', 'sfDataUri');
   await rmdir(dataPath, { recursive: true });
@@ -48,14 +49,22 @@ async function writeDataFiles() {
   });
 }
 
+// Copy the current signal-flag-images images to static.
 async function copyAssetFiles() {
   exec(`rm -rf static/sf-*`);
   exec(`cp node_modules/signal-flag-images/sf-* static -r`);
 }
 
+// Copy the current signal-flag-images/svg.json to data/sf.
+async function copySvgFileToData() {
+  // exec(`rm -rf static/sf-*`);
+  exec(`cp node_modules/signal-flag-images/svg.json data/sf`);
+}
+
 async function main() {
   writeDataFiles();
   copyAssetFiles();
+  copySvgFileToData();
 }
 
 main();

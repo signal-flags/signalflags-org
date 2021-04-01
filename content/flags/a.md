@@ -1,17 +1,17 @@
 ---
+draft: true
 title: Alphabet flag A
-layout: flag-page.html
+
+tags: [white, blue, swallowtail]
+
+categories: [flag, alphabet, ics]
+
 flagKey: a
-# date: 2013-01-01 20:00:00
-rectangleOutline: true
-squareOutline: true
-rectangleNoOutline: true
-squareNoOutline: true
-squareNoOutlinePrimary: true
-tags: [flag, alphabet, red, swallowtail]
-categories: [flags, alphabet]
+
+images:
+  - rectangleOutline
+  - rectangleNoOutline
+  - squareOutline
+  - squareNoOutline
+  - squareNoOutlinePrimary
 ---
-
-Some text for flag a.
-
-Isn't it great?

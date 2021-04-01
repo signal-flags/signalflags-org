@@ -1,8 +1,8 @@
 ---
 draft: true
-title: Alphabet flag A
+title: Alphabet flag C
 layout: flag-page.html
-flagKey: a
-tags: [red, swallowtail]
+flagKey: c
+tags: [blue, white, red]
 categories: [flag, alphabet, ics]
 ---

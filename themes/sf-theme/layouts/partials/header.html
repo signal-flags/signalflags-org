@@ -1,6 +1,7 @@
-<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark py-0">
+{{ partial "icons.html" }}
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark py-0">
   <div class="container">
-    <!-- a class="navbar-brand" href="#">Navbar</a-->
+    <a class="navbar-brand" href="/">Signal Flags</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -12,78 +13,22 @@
     ><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-sm-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/download/">Download</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/about/">About</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/about/contact/">Contact</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
+        {{ $current := . }}
+        {{ range .Site.Menus.nav }}
+          <li class="ms-2">
+            {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
+            {{ $active = or $active (eq .Name $current.Title) }}
+            {{ $active = or $active (and (eq .Name "Flags") (eq $current.Section "flags")) }}
+            {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
+            <a
+              href="{{ .URL }}"
+              {{- if $active -}}class="nav-link active" aria-current="page"
+              {{- else -}}class="nav-link"
+              {{- end -}}
+            >{{ partial "icon.html" .Name }}{{ .Name }}</a>
+          </li>
+        {{ end }}
       </ul>
     </div>
   </div>
 </nav>
-
-<!--
-<div class="fixed w-full z-50 site-header">
-  <nav class="container px-4 mx-auto flex flex-wrap items-center justify-between sm:justify-start">
-    <div class="flex sm:hidden py-2">
-      <button id="hamburger" class="focus:outline-none">
-        <span class="toggle block"><svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-</svg></span>
-        <span class="toggle hidden"><svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-</svg></span>
-      </button>
-    </div>
-
-    <a href="#" class="hover:opacity-80 sm:mr-6">signalflags.org</a>
-
-    <div class="w-6"></div>
-
-    <div class="toggle hidden w-full py-2 sm:p-0 sm:w-auto sm:flex">
-      <a href="/flags/" class="nav-menu-item"><svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180">
-<path fill="#f5f5f5" d="M0,0H120V180H0Z"/>
-<path fill="#c8102e" d="M120,0H240V180H120Z"/>
-<path fill="none" stroke="#000" stroke-width="1" d="M0.5,0.5H239.5V179.5H0.5Z"/>
-</svg>Flags</a>
-      <a href="/download/" class="nav-menu-item">{{ partial "icon" "download" }}Download</a>
-      <a href="/about/" class="nav-menu-item">{{ partial "icon" "info" }}About</a>
-    </div>
-
-  </nav>
-</div>
-
-<script>
-  document.getElementById("hamburger").onclick = function toggleMenu() {
-    const navToggle = document.getElementsByClassName("toggle");
-    for (let i = 0; i < navToggle.length; i++) {
-      navToggle.item(i).classList.toggle("hidden");
-    }
-  };
-</script>
--->
