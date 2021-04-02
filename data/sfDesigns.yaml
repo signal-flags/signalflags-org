@@ -6,26 +6,31 @@ designs:
     path: sf-rectangle-outline
     dataUri: sfRectangleOutline
     shape: rectangle
+    human: Rectangle with outline
 
   squareOutline:
     path: sf-square-outline
     dataUri: sfSquareOutline
     shape: square
+    human: Square with outline
 
   pennantOutline:
     path: sf-pennant-outline
     dataUri: sfPennantOutline
     shape: pennant
+    human: Pennant with outline
 
   shortOutline:
     path: sf-short-outline
     dataUri: sfShortOutline
     shape: short
+    human: Short with outline
 
   triangleOutline:
     path: sf-triangle-outline
     dataUri: sfTriangleOutline
     shape: triangle
+    human: Triangle with outline
 
   # No outline -----------------------------------------------------------------
 
@@ -33,26 +38,31 @@ designs:
     path: sf-rectangle-no-outline
     dataUri: sfRectangleNoOutline
     shape: rectangle
+    human: Rectangle without outline
 
   squareNoOutline:
     path: sf-square-no-outline
     dataUri: sfSquareNoOutline
     shape: square
+    human: Square without outline
 
   pennantNoOutline:
     path: sf-pennant-no-outline
     dataUri: sfPennantNoOutline
     shape: pennant
+    human: Pennant without outline
 
   shortNoOutline:
     path: sf-short-no-outline
     dataUri: sfShortNoOutline
     shape: short
+    human: Short without outline
 
   triangleNoOutline:
     path: sf-triangle-no-outline
     dataUri: sfTriangleNoOutline
     shape: triangle
+    human: Triangle without outline
 
   # No outline primary colours -------------------------------------------------
 
@@ -60,13 +70,16 @@ designs:
     path: sf-square-no-outline-primary
     dataUri: sfSquareNoOutlinePrimary
     shape: square
+    human: Primary
 
   pennantNoOutlinePrimary:
     path: sf-pennant-no-outline-primary
     dataUri: sfPennantNoOutlinePrimary
     shape: short
+    human: Primary
 
   triangleNoOutlinePrimary:
     path: sf-triangle-no-outline-primary
     dataUri: sfTriangleNoOutlinePrimary
     shape: triangle
+    human: Primary

@@ -9,43 +9,58 @@
 {{ end }}
 </div>
 
-{{ .Content }}
-
-<!-- Tabs for each image -->
-<ul class="nav nav-pills flex-column flex-sm-row">
-{{ range $i, $image := .Params.images }}
-  <li class="nav-item" role="presentation">
-    <button
-        class="flex-sm-fill text-sm-center nav-link{{ if eq $i 0 }} active{{ end }}"
-        id="{{ $image }}-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#tab-{{ $image }}"
-        type="button"
-        role="tab"
-        aria-controls="home"
-        aria-selected="true">{{ $image }}</button>
-  </li>
-{{ end }}
-</ul>
-
-<div class="tab-content" id="myTabContent">
-{{ range $i, $image := .Params.images }}
-  <div class="tab-pane fade{{ if eq $i 0 }} show active{{ end }}" id="tab-{{ $image }}" role="tabpanel" aria-labelledby="{{ $image }}-tab">
-  Show {{ $image }} svg
-  </div>
-{{ end }}
-</div>
-
-<!-- Show all available svg -->
-{{ range .Params.images }}
-{{ $design := index $.Site.Data.sfDesigns.designs . }}
-
-{{ partial "sf/single-flag" (dict "ctx" $ "folder" . "key" $key) }}
-
-{{ highlight (index $.Site.Data.sf.svg.svg $design.path $key) "svg" "style=solarized-light" }}
-{{ end }}
-
+<div class="my-2">
 {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
 {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
+</div>
+
+<div class="my-2">
+{{ .Content }}
+</div>
+
+<h3>Select design</h3>
+
+<div class="row">
+  <div class="col-md-4 col-lg-3 my-2">
+    <!-- List item for each design -->
+    <div class="list-group mb-2">
+      {{ range $i, $image := .Params.images }}
+      {{ $design := index $.Site.Data.sfDesigns.designs . }}
+        <button
+          class="list-group-item list-group-item-action{{ if eq $i 0 }} active{{ end }}"
+          id="{{ $image }}-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#tab-{{ $image }}"
+          type="button"
+          role="tab"
+          aria-controls="home"
+          aria-selected="true">{{ $design.human }}</button>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="col-md-8 col-lg-9">
+    <div class="tab-content">
+      {{ range $i, $image := .Params.images }}
+      {{ $design := index $.Site.Data.sfDesigns.designs . }}
+      <div class="tab-pane {{ if eq $i 0 }} show active{{ end }}" id="tab-{{ $image }}" role="tabpanel" aria-labelledby="{{ $image }}-tab">
+        <!-- Individual flag image -->
+        <div class="d-flex flex-wrap justify-content-evenly">
+          <div class="bg-secondary p-2">
+            {{ partial "sf/single-flag" (dict "ctx" $ "folder" . "key" $key) }}
+          </div>
+          <div class="p-2">
+            {{ partial "sf/single-flag" (dict "ctx" $ "folder" . "key" $key) }}
+          </div>
+        </div>
+
+        <!-- SVG code panel -->
+        <h5>SVG markup</h5>
+        {{ highlight (index $.Site.Data.sf.svg.svg $design.path $key) "svg" "style=solarized-light" }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
 
 {{ end }}
