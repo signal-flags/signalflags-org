@@ -12,9 +12,8 @@
   {{ end }}
 </div>
 
-<div class="my-2">
-{{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
-{{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
+<div class="my-2 text-center">
+{{ with .Page.Params.Tags }}{{ partial "taxonomy/taglist-of-page-tags.html" . }}{{ end }}
 </div>
 
 <div class="my-2">

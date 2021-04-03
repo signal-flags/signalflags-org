@@ -9,7 +9,7 @@
 </main>
 
 <aside class="my-2">
-  {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
-  {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
+  {{ with .Page.Params.Categories }}{{ partial "taxonomy/taglist-of-page-categories.html" . }}{{ end }}
+  {{ with .Page.Params.Tags }}{{ partial "taxonomy/taglist-of-page-tags.html" . }}{{ end }}
 </aside>
 {{ end }}

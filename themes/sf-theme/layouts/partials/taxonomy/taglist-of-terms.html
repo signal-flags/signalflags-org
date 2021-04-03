@@ -1,23 +1,22 @@
-
-{{- $linkBase := .ctx.Permalink -}}
-
+<!-- layouts/partials/taglist-of-terms.html
+  List terms for a taxonomy in a 'taglist' style, with the number of pages
+  shown for each term.
+-->
+{{ $linkBase := .ctx.Permalink }}
 {{ $terms := .ctx.Data.Terms }}
-
 {{ if index . "byCount" }}
-{{ $terms = $terms.ByCount }}
+{{   $terms = $terms.ByCount }}
 {{ else }}
-{{ $terms = $terms.Alphabetical }}
+{{   $terms = $terms.Alphabetical }}
 {{ end }}
 
 {{ range $i, $term := $terms }}
-{{ $path := replace (replace $term.Term "#" "%23") "." "%2e" }}
-
+{{   $path := replace (replace $term.Term "#" "%23") "." "%2e" | urlize }}
 <a
+  href="{{ $linkBase }}{{ $path }}"
   class="me-2 mb-2 btn btn-secondary btn-sm rounded-pill text-dark"
-  href="{{ $linkBase }}{{ $path | urlize }}"
   >{{ $term.Term }}
-  <span class="badge bg-white text-dark rounded-pill"
-    >{{ $term.Count }}</span
+  <span class="badge bg-white text-dark rounded-pill">{{ $term.Count }}</span
   ><span class="visually-hidden"> pages</span></a
 >
 {{- end }}

@@ -1,9 +1,10 @@
 <div class="card">
-<div class="card-header h5">{{ .listTitle}}</div>
-
+{{ if .listTitle }}
+<div class="card-header h5">{{ .listTitle }}</div>
+{{ end }}
 <div class="list-of-pages list-group list-group-flush">
   {{ range .ctx.Pages }}
-  <a href="{{ .Permalink }}" class="list-group-item list-group-item-action">{{ .Title }}</a>
+  <a href="{{ .Permalink }}" class="list-group-item list-group-item-action py-1">{{ .Title }}</a>
   {{ end }}
 </div>
 
