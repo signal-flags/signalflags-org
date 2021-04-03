@@ -3,9 +3,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>{{ .Title }}</title>
-{{/* <meta name="description"
-    content="Website meta description for google search results go here" /> */}}
-{{/* <meta name="theme-color" content="#1A94D2" /> */}}
+
+{{ if .Page.Params.description }}
+<meta name="description" content="{{ .Page.Params.description }}" />
+{{ else }}
+<meta name="description" content="{{ .Site.Params.description }}" />
+{{ end }}
+<meta name="theme-color" content="{{ .Site.Params.themeColor }}" />
 
 <!-- This will inline css on every page. -->
 {{/* $styles := resources.Get "sass/main.scss" | toCSS | postCSS | minify }}

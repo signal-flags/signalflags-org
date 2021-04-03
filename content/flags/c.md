@@ -1,8 +1,15 @@
 ---
-draft: true
 title: Alphabet flag C
-layout: flag-page.html
+description: >-
+  The flag representing the letter ‘C’ (Charlie) from the International Code of
+  Signals, including free SVG vector images to download.
+
 flagKey: c
-tags: [blue, white, red]
-categories: [flag, alphabet, ics]
+tags: [blue, white, red, flag, alphabet, ics]
+images:
+  - rectangleOutline
+  - rectangleNoOutline
+  - squareOutline
+  - squareNoOutline
+  - squareNoOutlinePrimary
 ---

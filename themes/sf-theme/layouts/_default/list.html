@@ -1,8 +1,8 @@
 {{ define "main" }}
 
-<h1>{{ .Title }}</h1>
+<h1 class="my-2">{{ .Title }}</h1>
 
-<div class="row">
+<div class="row my-2">
   <div
     {{ if not .Params.hideSidebar }}class="col-lg-8"
     {{ end }}

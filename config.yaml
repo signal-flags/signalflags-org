@@ -5,6 +5,9 @@ publishDir: signal-flags.github.io/docs
 # relativeURLS: true
 theme: sf-theme
 markup:
+  highlight:
+    style: github
+    noClasses: false
   goldmark:
     parser:
       attribute:
@@ -16,6 +19,11 @@ markup:
 params:
   showWordCount: false
   showDate: false
+  description: >-
+    Flags and pennants from the International Code of Signals and other RRS
+    (sailing) flags including free SVG vector images to download.
+  themeColor: '#224c73'
+  highlightTheme: monokai
 
 module:
   mounts:

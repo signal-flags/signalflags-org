@@ -1,12 +1,15 @@
-{{ define "main" }}
-<h3>{{ .Title }}</h3>
+{{ define "main"                                                              }}
+<!-- layouts/flags/single.html                                               -->
 
-{{ $key := .Params.flagKey }}
+{{ $key := .Params.flagKey                                                    }}
+
+<h1 class="my-2">{{ .Title }}</h1>
+
 <!-- Show all available images -->
-<div class="d-flex flex-wrap justify-content-around mb-2 contrast-pattern">
-{{ range .Params.images }}
-<div class="m-2">{{ partial "sf/single-flag" (dict "ctx" $ "folder" . "key" $key) }}</div>
-{{ end }}
+<div class="d-flex flex-wrap justify-content-around my-2 contrast-pattern">
+  {{ range .Params.images }}
+  <div class="m-2">{{ partial "sf/single-flag" (dict "ctx" $ "folder" . "key" $key) }}</div>
+  {{ end }}
 </div>
 
 <div class="my-2">
@@ -18,14 +21,16 @@
 {{ .Content }}
 </div>
 
-<h3>Select design</h3>
-
 <div class="row">
-  <div class="col-md-4 col-lg-3 my-2">
-    <!-- List item for each design -->
-    <div class="list-group mb-2">
-      {{ range $i, $image := .Params.images }}
-      {{ $design := index $.Site.Data.sfDesigns.designs . }}
+  <div class="col-lg-4 my-2">
+    <div class="card">
+      <div class="card-header h5 bg-secondary">
+        Select design
+      </div>
+      <!-- List item for each design -->
+      <div class="list-group list-group-flush" role="tablist">
+        {{ range $i, $image := .Params.images }}
+        {{ $design := index $.Site.Data.sfDesigns.designs . }}
         <button
           class="list-group-item list-group-item-action{{ if eq $i 0 }} active{{ end }}"
           id="{{ $image }}-tab"
@@ -33,19 +38,27 @@
           data-bs-target="#tab-{{ $image }}"
           type="button"
           role="tab"
-          aria-controls="home"
-          aria-selected="true">{{ $design.human }}</button>
-      {{ end }}
-    </div>
+          aria-controls="tab-{{ $image }}"
+          {{ if eq $i 0 }}aria-selected="true"{{ end }}
+        >{{ $design.human }}</button>
+        {{ end }}
+      </div><!-- /.list-group -->
+    </div><!-- /.card -->
   </div>
 
-  <div class="col-md-8 col-lg-9">
-    <div class="tab-content">
+  <div class="col-lg-8">
+    <div id="tab-content" class="tab-content">
+      <!-- Generate tab panels for each design. -->
       {{ range $i, $image := .Params.images }}
       {{ $design := index $.Site.Data.sfDesigns.designs . }}
-      <div class="tab-pane {{ if eq $i 0 }} show active{{ end }}" id="tab-{{ $image }}" role="tabpanel" aria-labelledby="{{ $image }}-tab">
-        <!-- Individual flag image -->
-        <div class="d-flex flex-wrap justify-content-evenly">
+      <div
+        class="tab-pane {{ if eq $i 0 }} show active{{ end }}"
+        id="tab-{{ $image }}"
+        role="tabpanel"
+        aria-labelledby="{{ $image }}-tab"
+        >
+        <!-- Individual flag images. -->
+        <div class="d-flex flex-wrap justify-content-evenly my-2">
           <div class="bg-secondary p-2">
             {{ partial "sf/single-flag" (dict "ctx" $ "folder" . "key" $key) }}
           </div>
@@ -55,8 +68,10 @@
         </div>
 
         <!-- SVG code panel -->
-        <h5>SVG markup</h5>
-        {{ highlight (index $.Site.Data.sf.svg.svg $design.path $key) "svg" "style=solarized-light" }}
+        <div class="my-2">
+        <p>SVG markup.</p>
+        {{ highlight (index $.Site.Data.sf.svg.svg $design.path $key) "svg" "" }}
+        </div>
       </div>
       {{ end }}
     </div>

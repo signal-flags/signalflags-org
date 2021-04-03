@@ -1,5 +1,0 @@
----
----
-
-Easy edit tags content.
-

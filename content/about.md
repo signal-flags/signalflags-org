@@ -1,5 +1,6 @@
 ---
 title: About signalflags.org
+categories: [info]
 ---
 
 {{% contrast 0 %}}

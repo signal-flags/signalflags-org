@@ -1,3 +1,3 @@
 
-<span class="badge rounded-pill tag">Tags</span>
+<span class="badge rounded-pill text-dark bg-secondary ms-2 me-1">Tags {{ partial "icon" "tags" }}</span>
 {{ partial "taxonomy/template.html" (dict "items" . "linkClass" "tag" "linkBase" "tags") }}
