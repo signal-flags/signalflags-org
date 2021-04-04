@@ -9,33 +9,28 @@ table:
     - 0-9 and answering pennants
     - substitutes
   rows:
-    - 
-      # class: table-primary
+    - # class: table-primary
       data:
         - With outlines
         - sf-rectangle-outline
         - sf-pennant-outline
         - sf-triangle-outline
-    -
-      data:
+    - data:
         - Alternative shapes
         - sf-square-outline
         - sf-short-outline
         -
-    -
-      data:
+    - data:
         - Without outlines
         - sf-rectangle-no-outline
         - sf-pennant-no-outline
         - sf-triangle-no-outline
-    -
-      data:
+    - data:
         - Alternative shapes without outlines
         - sf-square-no-outline
         - sf-short-no-outline
         -
-    -
-      class: font-size-sm text-muted
+    - class: font-size-sm text-muted
       data:
         - Primary colours without outlines
         - sf-square-no-outline-primary
@@ -67,6 +62,7 @@ like this: {{< sf/inlineFlagImg ap >}} is located at
 | Without outlines                    | `sf-rectangle-no-outline`      | `sf-pennant-no-outline`         | `sf-triangle-no-outline`         |
 | Alternative shapes without outlines | `sf-square-no-outline`         | `sf-short-no-outline`           |
 | Primary colours without outlines    | `sf-square-no-outline-primary` | `sf-pennant-no-outline-primary` | `sf-triangle-no-outline-primary` |
+
 {.table}
 
 {{< table "table" >}}

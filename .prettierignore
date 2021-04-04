@@ -1,15 +1,10 @@
 # .prettierignore
 
 # Makes a mess of layouts.
-/layouts/partials
-/layouts/shortcodes
+**/layouts
 
 # Generated files.
 /resources/_gen
-/signal-flags.github.io/docs/css
 
-# Old site imported css.
-/signal-flags.github.io/docs/assets/app/app-eoh58.min.css
-/static/assets/app/app-eoh58.min.css
-
-
+# Leave imported chroma styles alone.
+**/chroma*.css

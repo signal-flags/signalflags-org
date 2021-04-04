@@ -1,7 +1,7 @@
 /*! signalflags.org site styles.
  */
 
- $primary: #224c73;
+$primary: #224c73;
 $secondary: #d7cfc7;
 $success: #227355;
 // $info:
@@ -9,42 +9,46 @@ $warning: #736422;
 $danger: #732c37;
 // $light: #c7b5a7;
 
-@import "node_modules/bootstrap/scss/bootstrap";
+@import 'node_modules/bootstrap/scss/bootstrap';
 
 /*! purgecss start ignore */
 
 // Chroma highlighting
-@import "themes/sf-theme/assets/css/chroma-github";
-/* Background */ .chroma { background-color: #f7efe7; }
+@import 'themes/sf-theme/assets/css/chroma-github';
+/* Background */
+.chroma {
+  background-color: #f7efe7;
+}
 
 .block-blue {
-  background:#224c73;
-  color:#fff
+  background: #224c73;
+  color: #fff;
 }
 .block-green {
-  background:#227355;
-  color:#fff;
+  background: #227355;
+  color: #fff;
 }
 .block-red {
-  background:#732c37;
-  color:#fff;
+  background: #732c37;
+  color: #fff;
 }
 .block-olive {
-  background:#736422;
-  color:#fff;
+  background: #736422;
+  color: #fff;
 }
-.block-dark{
-  background:#2d2926;
-  color:#fff}
+.block-dark {
+  background: #2d2926;
+  color: #fff;
+}
 
-.block-light{
-  background:#c7b5a7
+.block-light {
+  background: #c7b5a7;
 }
 
 /*! Site styles 2
  */
 
- // Layout.
+// Layout.
 #content {
   // Clear top nav.
   padding-top: 40px;
@@ -82,7 +86,6 @@ nav.navbar {
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23224c73' fill-opacity='0.125' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
-
 .contrast {
   color: #000;
   background: #d7cfc7;
@@ -99,7 +102,9 @@ nav.navbar {
   background: #cccccc;
 }
 
-.badge.tag { background: #ccc }
+.badge.tag {
+  background: #ccc;
+}
 
 // Tag label links.
 
@@ -127,7 +132,9 @@ nav.navbar {
 }
 
 .flags-in-a-row {
-  display: flex; flex-wrap: wrap; text-align: center; // flex-wrap text-center mb-4;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center; // flex-wrap text-center mb-4;
 }
 
 /* Can't apply w-16 */
@@ -142,22 +149,26 @@ nav.navbar {
 .single-flag.rectangle {
   width: 4rem;
 }
-.flags-in-a-row.triangle > div, .single-flag.triangle {
+.flags-in-a-row.triangle > div,
+.single-flag.triangle {
   width: 4rem;
 }
-.flags-in-a-row.pennant > div, .single-flag.pennant {
+.flags-in-a-row.pennant > div,
+.single-flag.pennant {
   width: 6rem;
 }
-.flags-in-a-row.short > div, .single-flag.short {
+.flags-in-a-row.short > div,
+.single-flag.short {
   width: 4em;
 }
-.flags-in-a-row.square > div, .single-flag.square {
+.flags-in-a-row.square > div,
+.single-flag.square {
   width: 3rem;
   /* width: 2.25rem; */
 }
 
-
-.flags-in-a-row .badge, .badge.flag-badge {
+.flags-in-a-row .badge,
+.badge.flag-badge {
   color: $body-color;
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid $body-color;

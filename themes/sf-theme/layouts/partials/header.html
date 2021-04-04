@@ -17,8 +17,7 @@
           <li class="ms-2">
             {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
             {{ $active = or $active (eq .Name $current.Title) }}
-            {{ $active = or $active (and (eq .Name "Flags") (eq $current.Section "flags")) }}
-            {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
+            {{ $active = or $active (and (eq .Name "About") (eq $current.RelPermalink "/about/")) }}
             <a
               href="{{ .URL }}"
               {{- if $active -}}class="nav-link active" aria-current="page"
