@@ -1,8 +1,4 @@
 module.exports = {
-  purge: [
-    './layouts/**/*.html',
-    './content/**/*.*',
-  ],
   plugins: {
     '@fullhuman/postcss-purgecss': {
       content: [

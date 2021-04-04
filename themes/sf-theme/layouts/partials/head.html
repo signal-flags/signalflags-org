@@ -18,15 +18,14 @@
     </style> */}}
 
 <!-- External stylesheet. -->
-{{/* $main := resources.Get "sass/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | postCSS}}
-<link rel="stylesheet" href="{{ $main.RelPermalink }}"> */}}
+{{/* $styles := resources.Get "sass/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | postCSS}}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}"> */}}
 
-{{/* $styles := resources.Get "css/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | postCSS */}}
 {{ $styles := resources.Get "css/main.scss" | resources.ToCSS }}
 {{ if .Site.IsServer }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
 {{ else }}
-  {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+  {{ $styles = $styles | postCSS | minify | fingerprint | resources.PostProcess }}
   <link
     rel="stylesheet"
     href="{{ $styles.RelPermalink }}"

@@ -1,5 +1,7 @@
+/*! signalflags.org site styles.
+ */
 
-$primary: #224c73;
+ $primary: #224c73;
 $secondary: #d7cfc7;
 $success: #227355;
 // $info:
@@ -8,13 +10,13 @@ $danger: #732c37;
 // $light: #c7b5a7;
 
 @import "node_modules/bootstrap/scss/bootstrap";
+
+/*! purgecss start ignore */
+
+// Chroma highlighting
 @import "themes/sf-theme/assets/css/chroma-github";
+/* Background */ .chroma { background-color: #f7efe7; }
 
-/* Background */ .chroma { background-color: #efdfd7; }
-
-// $dark:
-
-/*! Site styles */
 .block-blue {
   background:#224c73;
   color:#fff
@@ -160,3 +162,5 @@ nav.navbar {
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid $body-color;
 }
+
+/*! purgecss end ignore */
