@@ -22,7 +22,10 @@ const dataFiles = [
 
   ['sfPennantOutline', { dataUri, type: 'pennant' }],
   ['sfPennantNoOutline', { dataUri, outline, type: 'pennant' }],
-  ['sfPennantNoOutlinePrimary', { dataUri, outline, colors, type: 'pennant', shape: 'short' }],
+  [
+    'sfPennantNoOutlinePrimary',
+    { dataUri, outline, colors, type: 'pennant', shape: 'short' },
+  ],
 
   ['sfShortOutline', { dataUri, type: 'pennant', shape: 'short' }],
   ['sfShortNoOutline', { dataUri, outline, type: 'pennant', shape: 'short' }],

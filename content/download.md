@@ -26,6 +26,7 @@ like this: {{< sf/inlineFlagImg ap >}} is located at
 | Without outlines                    | `sf-rectangle-no-outline`      | `sf-pennant-no-outline`         | `sf-triangle-no-outline`         |
 | Alternative shapes without outlines | `sf-square-no-outline`         | `sf-short-no-outline`           |
 | Primary colours without outlines    | `sf-square-no-outline-primary` | `sf-pennant-no-outline-primary` | `sf-triangle-no-outline-primary` |
+
 {.table}
 
 ## Use an image in a document

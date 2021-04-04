@@ -32,19 +32,18 @@ module:
 
 menus:
   nav:
-    -
-      name: Flags
+    - name: Flags
       url: /flags/
       weight: 100
-    -
-      name: Download
+
+    - name: Download
       url: /download/
       weight: 200
-    -
-      name: About
+
+    - name: About
       url: /about/
       weight: 400
-    -
-      name: Help
+
+    - name: Help
       url: /help/
       weight: 500

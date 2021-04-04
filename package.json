@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "build": "npm run build:hugo",
+    "build": "npm run lint:fix && npm run build:hugo",
     "build:signal-flags": "rm -rf data/signal-flags && node bin/build-signal-flags",
     "lint": "prettier . --check",
     "lint:fix": "prettier . --write",
