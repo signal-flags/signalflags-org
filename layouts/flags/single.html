@@ -1,0 +1,86 @@
+{{ define "main"                                                              }}
+<!-- layouts/flags/single.html                                               -->
+
+{{ $key := .Params.flagKey                                                    }}
+
+<h1 class="my-2">{{ .Title }}</h1>
+
+<!-- Show all available images -->
+<div class="d-flex flex-wrap justify-content-around my-2 contrast-pattern">
+  {{ range .Params.images }}
+  <div class="m-2">{{ partial "sf/single-flag" (dict "ctx" $ "folder" . "key" $key) }}</div>
+  {{ end }}
+</div>
+
+<div class="my-2 text-center">
+{{ with .Page.Params.Tags }}{{ partial "taxonomy/taglist-of-page-tags.html" . }}{{ end }}
+</div>
+
+<div class="my-2">
+{{ .Content }}
+</div>
+
+<div class="my-2">
+  Select the design variant below to show the flag and its SVG code. Click on
+  any image on this page to download the image, or copy and paste the SVG code
+  into a document.
+</div>
+
+<div class="row my-2">
+  <div class="col-lg-4 my-2">
+    <div class="card">
+      <div class="card-header h5 bg-secondary">
+        Select variant
+      </div>
+      <!-- List item for each design -->
+      <div class="list-group list-group-flush" role="tablist">
+        {{ range $i, $image := .Params.images }}
+        {{ $design := index $.Site.Data.sfDesigns.designs . }}
+        <button
+          class="list-group-item list-group-item-action{{ if eq $i 0 }} active{{ end }}"
+          id="{{ $image }}-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#tab-{{ $image }}"
+          type="button"
+          role="tab"
+          aria-controls="tab-{{ $image }}"
+          {{ if eq $i 0 }}aria-selected="true"{{ end }}
+        >{{ $design.human }}</button>
+        {{ end }}
+      </div><!-- /.list-group -->
+    </div><!-- /.card -->
+  </div>
+
+  <div class="col-lg-8">
+    <div id="tab-content" class="tab-content">
+      <!-- Generate tab panels for each design. -->
+      {{ range $i, $image := .Params.images }}
+      {{ $design := index $.Site.Data.sfDesigns.designs . }}
+      <div
+        class="tab-pane {{ if eq $i 0 }} show active{{ end }}"
+        id="tab-{{ $image }}"
+        role="tabpanel"
+        aria-labelledby="{{ $image }}-tab"
+        >
+        <!-- Individual flag images. -->
+        <div class="d-flex flex-wrap justify-content-evenly my-2">
+          <div class="bg-secondary p-2">
+            {{ partial "sf/single-flag" (dict "ctx" $ "folder" . "key" $key) }}
+          </div>
+          <div class="p-2">
+            {{ partial "sf/single-flag" (dict "ctx" $ "folder" . "key" $key) }}
+          </div>
+        </div>
+
+        <!-- SVG code panel -->
+        <div class="my-2">
+        <p>SVG markup.</p>
+        {{ highlight (index $.Site.Data.sf.svg.svg $design.path $key) "svg" "" }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+{{ end }}

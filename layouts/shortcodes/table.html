@@ -1,0 +1,25 @@
+{{ $table := index .Page.Params (.Get 0)                                      }}
+{{ $titleCols := 1                                                            }}
+
+<table class="table{{ if $table.class }} {{ $table.class }}{{ end }}">
+  <thead>
+    <tr>
+      {{ range $table.titles }}
+      <th>{{ . }}</th>
+      {{ end }}
+    </tr>
+  </thead>
+  <tbody>
+    {{ range $table.rows }}
+    <tr{{ if .class }} class="{{ .class }}"{{ end }}>
+      {{ range $col, $cell := .data }}
+        {{ if lt $col $titleCols }}
+          <th>{{ $cell }}</th>
+        {{ else }}
+          <td>{{ $cell }}</td>
+        {{ end }}
+      {{ end }}
+    </tr>
+    {{ end }}
+  </tbody>
+</table>

@@ -1,0 +1,30 @@
+{{ $dataUri := index $.Page.Site.Data.sfDesigns.designs (.Get 1) "dataUri"    }}
+
+{{ $path := index $.Page.Site.Data.sfDesigns.designs (.Get 1) "path"          }}
+{{ $flags := index $.Page.Site.Data.sfFlags.flags                             }}
+{{ $flagNames := index $.Page.Site.Data.sfFlags.groups (.Get 0)               }}
+
+<div class="flags-in-a-row {{ .Get 2 }} pb-2 mb-2">
+{{ range $flagNames}}
+  {{/* <div>
+    <div style="margin-bottom: 1px;"><a class="badge bg-secondary text-decoration-none" href="/flags/{{ . }}">{{ index $flags . "abbr" }}</a></div>
+    <a href="{{ $path }}{{ . }}.svg" download="{{ . }}"
+      ><img
+        src="{{ index $.Page.Site.Data.sfDataUri $dataUri . | safeURL }}"
+        alt='{{ index $flags . "alt" }}'
+    /></a>
+  </div> */}}
+
+  <div>
+    <a href="/{{ $path }}/{{ . }}.svg" download="{{ . }}"
+    ><img
+      src="{{ index $.Page.Site.Data.sfDataUri $dataUri . | safeURL }}"
+      alt='{{ index $flags . "alt" }}'
+    /></a>
+      <a
+        class="text-center position-absolute top-0 start-50 translate-middle-x badge text-decoration-none"
+        href="/flags/{{ . }}"
+      >{{ index $flags . "abbr" }}</a>
+  </div>
+{{ end }}
+</div>

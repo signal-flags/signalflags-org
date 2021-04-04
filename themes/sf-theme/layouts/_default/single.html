@@ -1,0 +1,15 @@
+{{ define "main" }}
+<!-- layouts/_default/single.html                                            -->
+<!-- This is the default page layout for content.                            -->
+<main class="my-2">
+  <article>
+    <h1 class="main-title">{{ .Title }}</h1>
+    <section class="main-content">{{ .Content }}</section>
+  </article>
+</main>
+
+<aside class="my-2">
+  {{ with .Page.Params.Categories }}{{ partial "taxonomy/taglist-of-page-categories.html" . }}{{ end }}
+  {{ with .Page.Params.Tags }}{{ partial "taxonomy/taglist-of-page-tags.html" . }}{{ end }}
+</aside>
+{{ end }}

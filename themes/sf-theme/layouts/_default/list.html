@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+<h1 class="my-2">{{ .Title }}</h1>
+
+<div class="row my-2">
+  <div
+    {{ if not .Params.hideSidebar }}class="col-lg-8"
+    {{ end }}
+  >
+    {{ .Content }}
+  </div>
+  {{ if not .Params.hideSidebar }}
+  <div class="col-lg-4">
+    {{ if and .Pages (not .Params.hidePageList) }}
+    {{ partial "list-of-pages.html" (dict "ctx" . "listTitle" "Pages in this section") }}
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+
+{{ end }}

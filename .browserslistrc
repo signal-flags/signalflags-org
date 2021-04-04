@@ -1,7 +1,0 @@
-# .browserslistrc
-# This is the same as the default but we could change it in future
-
-> 0.5%,
-last 2 versions,
-Firefox ESR,
-not dead

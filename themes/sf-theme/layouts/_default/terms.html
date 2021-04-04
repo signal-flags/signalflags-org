@@ -1,0 +1,31 @@
+{{ define "main" }}
+<!-- layouts/_default/terms.html
+  This is the default page layout for a taxonomy e.g. /tags/ or /categories/. It
+  can be overridden by e.g. layouts/tag/terms.html, or to change the title and
+  content create a page e.g. content/tags/_index.md.
+-->
+<main class="my-2">
+  <!-- Title. -->
+  <h1 class="main-title prose">{{ .Title }}</h1>
+
+  <!-- Content. -->
+  {{ if .Content }}
+  <section class="main-content prose">{{ .Content }}</section>
+  {{ else }}
+  <section class="main-content prose">
+    <p>
+      These are the {{ .Data.Plural }} used on this site showing the number of
+      pages for each {{ .Data.Singular }}.
+    </p>
+  </section>
+  {{ end }}
+
+  <!-- List of tags. -->
+  <section>
+    {{ partial "taxonomy/taglist-of-terms.html" (dict
+      "ctx" .
+      "byCount" (index .Page.Params "byCount"))
+    }}
+  </section>
+</main>
+{{ end }}

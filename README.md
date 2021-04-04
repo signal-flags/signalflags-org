@@ -4,29 +4,22 @@
 
 ## Development
 
-### File structure
+Moved to Hugo.
+| | |
+|--|--|
+| `some/path/signalflags.org` | this repo
+| `some/path/signalflags.org/signal-flags.github.io` | github pages repo
+| `some/path/signalflags.org/signal-flags.github.io/docs` | build target for hugo
+| `some/path/signal-flags-js/` | local copy of `signal-flags` npm module
 
-```yaml
-bin                    # Scripts.
-docs                   # The public build directory.
-site                   # The contents, tempates, data etc. for the site.
-site/content           # Content goes here.
-site/data              # Data goes here.
-site/filters/index.js  # Filters exported here are added automagically.
-site/layouts           # Layouts go here - they don't need prefixing in source files.
-site/plugins/index.js  # Plugins exported here are added automagically.
-site/static            # Contents of this directory are copied across to the site intact.
-src                    # Site JavaScript and CSS (to be build by Webpack).
-```
+````
 
 ### Scripts
 
-```bash
-$ npm run build    # Build into dist for deployment (does not run Webpack).
-$ npm run bundle   # Build Webpack module bundle.
+```console
+$ npm run build:signal-flags # Build from signal-flags and signal-flags-images.
+$ npm run build    # Build into docs for publication.
 $ npm run lint     # Check lint and prettier.
 $ npm run lint:fix # Fix lint and prettier.
-$ npm run watch    # ???
 $ npm run serve    # Build and run a development server.
-$ npm run debug    # Run a DEBUG build.
-```
+````

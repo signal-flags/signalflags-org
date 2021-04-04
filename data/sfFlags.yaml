@@ -1,0 +1,293 @@
+# Flags are included in the following groups.
+groups:
+  # prettier-ignore
+  alphabet: [a, b, c, d, e, f, g, h, i, j, k, l, m, 'n', o, p, q, r, s, t, u, v, w, x, 'y', z]
+  numerals: [n1, n2, n3, n4, n5, n6, n7, n8, n9, n0, ap]
+  substitutes: [s1, s2, s3, s4]
+  rrs:
+    - black
+
+    - red
+    - yellow
+    - green
+    - blue
+    - orange
+
+    - blackwhite
+    - greenwhite
+    - increase
+    - decrease
+    - toport
+    - tostarboard
+
+flags:
+  a:
+    abbr: A
+    alt: Signal flag A
+    group: alphabet
+
+  b:
+    abbr: B
+    alt: Signal flag B
+    group: alphabet
+
+  c:
+    abbr: C
+    alt: Signal flag C
+    group: alphabet
+
+  d:
+    abbr: D
+    alt: Signal flag D
+    group: alphabet
+
+  e:
+    abbr: E
+    alt: Signal flag E
+    group: alphabet
+
+  f:
+    abbr: F
+    alt: Signal flag F
+    group: alphabet
+
+  g:
+    abbr: G
+    alt: Signal flag G
+    group: alphabet
+
+  h:
+    abbr: H
+    alt: Signal flag H
+    group: alphabet
+
+  i:
+    abbr: I
+    alt: Signal flag I
+    group: alphabet
+
+  j:
+    abbr: J
+    alt: Signal flag J
+    group: alphabet
+
+  k:
+    abbr: K
+    alt: Signal flag K
+    group: alphabet
+
+  l:
+    abbr: L
+    alt: Signal flag L
+    group: alphabet
+
+  m:
+    abbr: M
+    alt: Signal flag M
+    group: alphabet
+
+  'n': # n without quotes is evaluated as false.
+    abbr: 'N'
+    alt: Signal flag N
+    group: alphabet
+
+  o:
+    abbr: O
+    alt: Signal flag O
+    group: alphabet
+
+  p:
+    abbr: P
+    alt: Signal flag P
+    group: alphabet
+
+  q:
+    abbr: Q
+    alt: Signal flag Q
+    group: alphabet
+
+  r:
+    abbr: R
+    alt: Signal flag R
+    group: alphabet
+
+  s:
+    abbr: S
+    alt: Signal flag S
+    group: alphabet
+
+  t:
+    abbr: T
+    alt: Signal flag T
+    group: alphabet
+
+  u:
+    abbr: U
+    alt: Signal flag U
+    group: alphabet
+
+  v:
+    abbr: V
+    alt: Signal flag V
+    group: alphabet
+
+  w:
+    abbr: W
+    alt: Signal flag W
+    group: alphabet
+
+  x:
+    abbr: X
+    alt: Signal flag X
+    group: alphabet
+
+  'y': # y without quotes is evaluated as true.
+    abbr: 'Y'
+    alt: Signal flag Y
+    group: alphabet
+
+  z:
+    abbr: Z
+    alt: Signal flag Z
+    group: alphabet
+
+  # --- Numerals ---------------------------------------------------------------
+
+  n1:
+    abbr: '1'
+    alt: Numeral 1 pennant
+    group: numerals
+
+  n2:
+    abbr: '2'
+    alt: Numeral 2 pennant
+    group: numerals
+
+  n3:
+    abbr: '3'
+    alt: Numeral 3 pennant
+    group: numerals
+
+  n4:
+    abbr: '4'
+    alt: Numeral 4 pennant
+    group: numerals
+
+  n5:
+    abbr: '5'
+    alt: Numeral 5 pennant
+    group: numerals
+
+  n6:
+    abbr: '6'
+    alt: Numeral 6 pennant
+    group: numerals
+
+  n7:
+    abbr: '7'
+    alt: Numeral 7 pennant
+    group: numerals
+
+  n8:
+    abbr: '8'
+    alt: Numeral 8 pennant
+    group: numerals
+
+  n9:
+    abbr: '9'
+    alt: Numeral 9 pennant
+    group: numerals
+
+  n0:
+    abbr: '0'
+    alt: Numeral 0 pennant
+    group: numerals
+
+  ap:
+    abbr: AP
+    alt: Answering pennant
+    group: numerals
+
+  # --- Substitutes --------------------------------------------------------------
+
+  s1:
+    abbr: 1st
+    alt: 1st substitute flag
+    group: substitutes
+
+  s2:
+    abbr: 2nd
+    alt: 2nd substitute flag
+    group: substitutes
+
+  s3:
+    abbr: 3rd
+    alt: 3rd substitute flag
+    group: substitutes
+
+  s4:
+    abbr: 4th
+    alt: 4th substitute flag
+    group: substitutes
+
+  # --- Racing -------------------------------------------------------------------
+
+  black:
+    abbr: Bk
+    alt: Black flag
+    group: rrs
+
+  blackwhite:
+    abbr: B/W
+    alt: Black and white flag
+    group: rrs
+
+  blue:
+    abbr: Bu
+    alt: Blue flag
+    group: rrs
+
+  green:
+    abbr: Gn
+    alt: Green flag
+    group: rrs
+
+  greenwhite:
+    abbr: G/W
+    alt: Green and white flag
+    group: rrs
+
+  decrease:
+    abbr: '-'
+    alt: Minus flag
+    group: rrs
+
+  orange:
+    abbr: Or
+    alt: Orange flag
+    group: rrs
+
+  increase:
+    abbr: +
+    alt: Plus flag
+    group: rrs
+
+  toport:
+    abbr: ToPort
+    alt: "'Moved to port' flag"
+    group: rrs
+
+  red:
+    abbr: Rd
+    alt: Red flag
+    group: rrs
+
+  tostarboard:
+    abbr: ToStbd
+    alt: "'Moved to starboard' flag"
+    group: rrs
+
+  yellow:
+    abbr: Yw
+    alt: Yellow flag
+    group: rrs
