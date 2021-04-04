@@ -1,6 +1,7 @@
-
+<!-- layouts/shortcodes/externalLink.html
+  Create a safe and pretty external link.
+  -->
 <a
   href="{{ .Get 0 }}"
   target="_blank"
-  rel="noopener"
->{{ .Inner }} {{ partial "icon" "link" }}</a>
+  rel="noopener">{{ .Inner | safeHTML }} {{ partial "icon" "link" }}</a>
