@@ -34,7 +34,7 @@ params:
     # imageAlt: Alt text for the image.
 
     # Type of display for Twitter.
-    twitterCard: summary_image
+    twitterCard: summary
 
     # App Id for Facebook analytics.
     # fbAppId:
