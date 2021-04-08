@@ -9,7 +9,7 @@
     "build:signal-flags": "rm -rf data/signal-flags && node bin/build-signal-flags",
     "lint": "prettier . --check",
     "lint:fix": "prettier . --write",
-    "build:hugo": "rm -rf signal-flags.github.io/docs && NODE_ENV=production hugo",
+    "build:hugo": "rm -rf signal-flags.github.io/docs && NODE_ENV=production hugo --minify",
     "serve": "hugo server -D --disableFastRender"
   },
   "keywords": [],
