@@ -4,33 +4,31 @@
 
 <title>{{ .Title }}</title>
 
-{{ if .Page.Params.description }}
-<meta name="description" content="{{ .Page.Params.description }}" />
-{{ else }}
-<meta name="description" content="{{ .Site.Params.description }}" />
-{{ end }}
+{{ partial "social-meta.html" . }}
+
 <meta name="theme-color" content="{{ .Site.Params.themeColor }}" />
 
-<!-- This will inline css on every page. -->
-{{/* $styles := resources.Get "sass/main.scss" | toCSS | postCSS | minify }}
-    <style>
-        {{- $styles.Content | safeCSS -}}
-    </style> */}}
-
-<!-- External stylesheet. -->
-{{/* $styles := resources.Get "sass/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | postCSS}}
-<link rel="stylesheet" href="{{ $styles.RelPermalink }}"> */}}
-
+<!-- Get CSS. -->
 {{ $styles := resources.Get "css/main.scss" | resources.ToCSS }}
 {{ if .Site.IsServer }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+<!-- In development mode link to built CSS 'as is'. -->
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+
+{{ else if .Page.Params.inlineCss }}
+<!-- In production mode purge and minify and include inline. -->
+{{ $styles = $styles | postCSS | minify | fingerprint | resources.PostProcess }}
+<style>
+{{ $styles.Content | safeCSS }}
+</style>
+
 {{ else }}
-  {{ $styles = $styles | postCSS | minify | fingerprint | resources.PostProcess }}
-  <link
-    rel="stylesheet"
-    href="{{ $styles.RelPermalink }}"
-    integrity="{{ $styles.Data.Integrity }}"
-  />
+<!-- In production mode purge and minify. -->
+{{ $styles = $styles | postCSS | minify | fingerprint | resources.PostProcess }}
+<link
+  rel="stylesheet"
+  href="{{ $styles.RelPermalink }}"
+  integrity="{{ $styles.Data.Integrity }}"
+/>
 {{ end }}
 
 <!-- 
@@ -39,8 +37,9 @@
 -->
 <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 
-  {{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
-  {{ $js := slice $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
-
-  <script src="{{$js.RelPermalink}}" defer></script>
+{{ if not .Page.Params.noJs }}
+{{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
+{{ $js := slice $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
+<script src="{{$js.RelPermalink}}" defer></script>
+{{ end }}
   

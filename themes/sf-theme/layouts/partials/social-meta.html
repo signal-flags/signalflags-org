@@ -1,0 +1,29 @@
+<!-- layouts/partials/social-meta.html
+  meta tags for facebook, twitter etc.
+  -->
+{{ $title := .Title }}
+{{ $description := default .Site.Params.description .Page.Params.description }}
+{{ $image := default .Site.Params.seo.image .Page.Params.image }}
+{{ $imageAlt := default .Site.Params.seo.imageAlt .Page.Params.imageAlt }}
+{{ $siteName := .Site.Params.seo.siteName }}
+
+<meta name="description" content="{{ $description }}" />
+
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+{{ if $image }}
+<meta property="og:image" content="{{ $image }}">
+<meta name="twitter:image:alt" content="{{ default $siteName $imageAlt }}">
+{{ end }}
+<meta property="og:url" content="{{ .Site.Params.seo.baseURL }}">
+<meta name="twitter:card" content="{{ default "summary_image" .Site.Params.seo.twitterCard }}">
+
+<meta property="og:site_name" content="{{ $siteName }}">
+
+<!-- Analytics. -->
+{{ with .Site.Params.seo.fbAppId }}
+<meta property="fb:app_id" content="{{ . }}" />
+{{ end }}
+{{ with .Site.Params.seo.twitterSite }}
+<meta name="twitter:site" content="{{ . }}">
+{{ end }}

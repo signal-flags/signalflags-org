@@ -25,6 +25,23 @@ params:
   themeColor: '#224c73'
   highlightTheme: monokai
 
+  seo:
+    siteName: signalflags.org
+    baseURL: https://signalflags.org/
+
+    # Fallback image url if the page doesn't have a featured image.
+    # image: https://example.com/image.png.
+    # imageAlt: Alt text for the image.
+
+    # Type of display for Twitter.
+    twitterCard: summary_image
+
+    # App Id for Facebook analytics.
+    # fbAppId:
+
+    # Twitter username for Twitter analytics.
+    twitterSite: '@signalflags_org'
+
 module:
   mounts:
     source: node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
